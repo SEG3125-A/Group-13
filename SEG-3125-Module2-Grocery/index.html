@@ -10,25 +10,37 @@
     <header>
         <h1>My Grocery Store</h1>
     </header>
-    <nav>
-        <!-- Navigation links will go here -->
-        <div class="navbar">
-            <a href="#client">Client</a>
-            <a href="#products">Products</a>
-            <a href="#cart">Cart</a>
-        </div>
-    </nav>
-    <main>
-        <section id="products">
-            <!-- Product listing will go here -->
-        </section>
-        <aside id="cart">
-            <!-- Cart view will go here -->
-        </aside>
-    </main>
+
+    <!-- Tab links -->
+    <div class="tab">
+        <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+        <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+        <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Client" class="tabcontent">
+        <h2>Client Information</h2>
+        <p>Here you can put information or forms for client-related data.</p>
+        <!-- Add more content here as needed -->
+    </div>
+
+    <div id="Products" class="tabcontent">
+        <h2>Our Products</h2>
+        <p>Here you would list your products. You can use a grid or list layout, include images, descriptions, prices, etc.</p>
+        <!-- Add more content here as needed -->
+    </div>
+
+    <div id="Cart" class="tabcontent">
+        <h2>Shopping Cart</h2>
+        <p>This section will display the products that the user has selected to purchase. It might include a list with quantities, prices, and a total cost.</p>
+        <!-- Add more content here as needed -->
+    </div>
+
     <footer>
         <p>Website designed by Group 13</p>
     </footer>
-<script src="scripts/script.js"></script>
+    
+    <script src="scripts/script.js"></script>
 </body>
 </html>
