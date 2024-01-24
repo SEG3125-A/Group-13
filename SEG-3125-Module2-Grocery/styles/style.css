@@ -35,3 +35,21 @@
         text-align: left;
     }
 }
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* You can also target each section individually if they need unique styles */
+#client {
+    background-color: #f0f0f0;
+}
+
+#products {
+    background-color: #e0e0e0;
+}
+
+#cart {
+    background-color: #d0d0d0;
+}
