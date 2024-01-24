@@ -1,55 +1,58 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Style the navigation bar */
-.navbar {
-    background-color: #333; /* Dark background */
-    overflow: hidden; /* Clear floats */
-}
-
-/* Navbar links */
-.navbar a {
-    float: left; /* Align links to the left side */
-    display: block; /* Change links from inline to block elements */
-    color: white; /* White text color */
-    text-align: center; /* Center text */
-    padding: 14px 16px; /* Padding for spacing around text */
-    text-decoration: none; /* Remove underline from links */
-    font-size: 17px; /* Increase font size */
-}
-
-/* Change the color of links on hover */
-.navbar a:hover {
-    background-color: #ddd; /* Light grey background */
-    color: black; /* Black text color */
-}
-
-/* Add responsiveness to the navigation bar */
-@media screen and (max-width: 600px) {
-    .navbar a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-}
-
-section {
+/* Style the header */
+header {
+    background-color: #333; /* Dark gray background */
+    color: white;
     padding: 20px;
-    margin: 20px 0;
+    text-align: center;
 }
 
-/* You can also target each section individually if they need unique styles */
-#client {
-    background-color: #f0f0f0;
+/* Style for the tab container */
+.tab {
+    overflow: hidden;
+    background-color: #f1f1f1;
 }
 
-#products {
-    background-color: #e0e0e0;
+/* Style the buttons inside the tab container */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
 }
 
-#cart {
-    background-color: #d0d0d0;
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333; /* Dark gray background */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
