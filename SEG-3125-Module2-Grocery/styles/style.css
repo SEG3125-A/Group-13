@@ -1,11 +1,37 @@
-body {
-    font-family: 'Arial', sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header, nav, main, footer {
-    padding: 1rem;
+/* Style the navigation bar */
+.navbar {
+    background-color: #333; /* Dark background */
+    overflow: hidden; /* Clear floats */
 }
 
-/* Add Additional styles */
+/* Navbar links */
+.navbar a {
+    float: left; /* Align links to the left side */
+    display: block; /* Change links from inline to block elements */
+    color: white; /* White text color */
+    text-align: center; /* Center text */
+    padding: 14px 16px; /* Padding for spacing around text */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 17px; /* Increase font size */
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+    background-color: #ddd; /* Light grey background */
+    color: black; /* Black text color */
+}
+
+/* Add responsiveness to the navigation bar */
+@media screen and (max-width: 600px) {
+    .navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
