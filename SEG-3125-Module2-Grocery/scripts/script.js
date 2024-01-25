@@ -1,33 +1,37 @@
-function renderProductList() {
-    let displayProductElement = document.getElementById('displayProduct');
+function populateListProductChoices(selectionId, listId) {
+    let listElement = document.getElementById(listId);
+    let selectionElem = document.getElementById(selectionId);
 
-    displayProductElement.innerHTML = ''; // Clear product list
+    listElement.innerHTML = ''; // Clear product list before filling it
+
+    filteredProducts = restrictListProducts(products, selectionElem.value);
+    console.log(filteredProducts);
     
     // Add each product to the product selection page
-    for (let productId in products) {
+    for (let productId in filteredProducts) {
 
-        let product = products[productId];
-
+        let productName = filteredProducts[productId];
+        
         // Create the checkbox/input element
         let productCheckbox = document.createElement('input');
 
         // Set the attributes to created checkbox
         productCheckbox.type = "checkbox";
-        productCheckbox.id = productId;
-        productCheckbox.value = product.name;
+        productCheckbox.id = productName;
+        productCheckbox.value = productName;
 
         // Create checkbox label
         let productLabel = document.createElement('label');
-        productLabel.for = productId;
+        productLabel.htmlFor = productName;
 
         // Create text for checkbox label and attach to label
-        let productLabelText = document.createTextNode(product.name);
+        let productLabelText = document.createTextNode(productName);
         productLabel.appendChild(productLabelText);
 
-        // Add elements to page
-        displayProductElement.appendChild(productCheckbox);
-        displayProductElement.appendChild(productLabel);
-        displayProductElement.appendChild(document.createElement('br')); // Add a line break
+        // Add elements to HTML DOM
+        listElement.appendChild(productCheckbox);
+        listElement.appendChild(productLabel);
+        listElement.appendChild(document.createElement('br')); // Add a line break
     }
 }
 
@@ -49,6 +53,4 @@ function openInfo(evt, tabName) {
 document.addEventListener('DOMContentLoaded', (event) => {
     // Open the first tab by default
     document.querySelector('.tablinks').click();
-
-    renderProductList();
 });
