@@ -72,6 +72,7 @@ var products = [
    
 ];
 
+// Returns a list of products filtered by dietary restrictions
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
@@ -89,4 +90,15 @@ function restrictListProducts(prods, restriction) {
 		}
 	}
 	return product_names;
+}
+
+// Get the total price of products selected in the products list
+function getTotalPrice(chosenProducts) {
+	totalPrice = 0;
+	for (let i=0; i<products.length; i+=1) {
+		if (chosenProducts.indexOf(products[i].name) > -1){
+			totalPrice += products[i].price;
+		}
+	}
+	return totalPrice;
 }
