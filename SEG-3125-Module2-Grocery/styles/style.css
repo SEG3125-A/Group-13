@@ -1,6 +1,6 @@
 /* Style the header */
 header {
-    background-color: #333; /* Dark gray background */
+    background-color: #ff0000; /* Dark gray background */
     color: white;
     padding: 20px;
     text-align: center;
@@ -44,7 +44,7 @@ header {
 
 /* Style the footer */
 footer {
-    background-color: #333; /* Dark gray background */
+    background-color: #ff0000; /* Dark gray background */
     color: white;
     padding: 10px;
     text-align: center;
