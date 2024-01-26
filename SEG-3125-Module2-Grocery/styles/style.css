@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Lobster&display=swap');
+
 /* Style the header */
 header {
-    background-color: #ff0000; /* Dark gray background */
+    background-color: #FF6169; /* Dark gray background */
     color: white;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
+    font-family: Lobster;
+    font-size: 30px;
 }
 
 /* Style for the tab container */
@@ -22,6 +26,7 @@ header {
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 17px;
+    font-family: Dosis;
 }
 
 /* Change background color of buttons on hover */
@@ -40,14 +45,16 @@ header {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+    font-family: Dosis;
 }
 
 /* Style the footer */
 footer {
-    background-color: #ff0000; /* Dark gray background */
+    background-color: #FF6169; /* Dark gray background */
     color: white;
     padding: 10px;
     text-align: center;
+    font-family: Dosis;
 }
 
 /* Clear floats */
