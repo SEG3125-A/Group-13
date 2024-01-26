@@ -37,12 +37,13 @@ function populateListProductChoices(selectionId, listId) {
         document.getElementById("testArea").innerHTML += filteredProducts[i].name;
         document.getElementById("testArea").innerHTML += "<br>";
     }
+    document.getElementById("testArea").innerHTML += "---<br>";
     
     // Add each product to the product selection page
     for (let productId in filteredProducts) {
 
         let productName = filteredProducts[productId].name;
-        let productPrice = filteredProducts[productId].price;
+        let productPrice = currencyFormatted(filteredProducts[productId].price);
         
         // Create the checkbox/input element
         let productCheckbox = document.createElement('input');
@@ -56,11 +57,13 @@ function populateListProductChoices(selectionId, listId) {
         // Create checkbox label
         let productLabel = document.createElement('label');
         //productLabel.htmlFor = productName;
-        let productNamePrice = productName + " " + productPrice;
+        let productNamePrice = productName + " $" + productPrice;
+        document.getElementById("testArea").innerHTML += productNamePrice;
+        document.getElementById("testArea").innerHTML += "<br>";
         productLabel.htmlFor = productNamePrice;
 
         // Create text for checkbox label and attach to label
-        let productLabelText = document.createTextNode(productName);
+        let productLabelText = document.createTextNode(productNamePrice);
         productLabel.appendChild(productLabelText);
 
         // Add elements to HTML DOM
@@ -80,7 +83,7 @@ function selectedItems(){
 	
 	// Build list of selected item
 	var para = document.createElement("p");
-	para.innerHTML = "You selected : ";
+	para.innerHTML = "You selected: ";
 	para.appendChild(document.createElement("br"));
 	for (i = 0; i < products.length; i++) { 
 		if (products[i].checked) {
