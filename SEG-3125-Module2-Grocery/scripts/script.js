@@ -27,11 +27,17 @@ function populateListProductChoices(selectionId, listId) {
 
     filteredProducts = restrictListProducts(products, selectionElem.value);
     console.log(filteredProducts);
+
+    // Sort the filtered products by price
+    filteredProducts.sort(function (x,y) {
+        return x.price - y.price;
+    });
     
     // Add each product to the product selection page
     for (let productId in filteredProducts) {
 
-        let productName = filteredProducts[productId];
+        let productName = filteredProducts[productId].name;
+        let productPrice = formatPrice(filteredProducts[productId].price);
         
         // Create the checkbox/input element
         let productCheckbox = document.createElement('input');
@@ -44,10 +50,12 @@ function populateListProductChoices(selectionId, listId) {
 
         // Create checkbox label
         let productLabel = document.createElement('label');
-        productLabel.htmlFor = productName;
+        //productLabel.htmlFor = productName;
+        let productNamePrice = productName + " $" + productPrice;
+        productLabel.htmlFor = productNamePrice;
 
         // Create text for checkbox label and attach to label
-        let productLabelText = document.createTextNode(productName);
+        let productLabelText = document.createTextNode(productNamePrice);
         productLabel.appendChild(productLabelText);
 
         // Add elements to HTML DOM
@@ -67,7 +75,7 @@ function selectedItems(){
 	
 	// Build list of selected item
 	var para = document.createElement("p");
-	para.innerHTML = "You selected : ";
+	para.innerHTML = "You selected: ";
 	para.appendChild(document.createElement("br"));
 	for (i = 0; i < products.length; i++) { 
 		if (products[i].checked) {
@@ -81,4 +89,25 @@ function selectedItems(){
 	cart.appendChild(para);
 	cart.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));
 		
+}
+
+function formatPrice(productPrice) {
+    formattedString = new String(productPrice);
+    
+    // The price is a whole number (ex: 10)
+    if (formattedString.indexOf(".") < 0) {
+        formattedString += ".00";
+    }
+
+    // The price has two decimal places (ex: 10.67), no change
+    else if (formattedString.indexOf(".") == (formattedString.length - 3)) {
+    	return formattedString;
+    }
+
+    // The price has only one decimal place (ex 10.6)
+    else if (formattedString.indexOf(".") == (formattedString.length - 2)) {
+        formattedString += "0";
+    }
+
+    return formattedString;
 }
