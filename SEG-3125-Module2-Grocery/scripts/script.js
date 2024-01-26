@@ -32,18 +32,12 @@ function populateListProductChoices(selectionId, listId) {
     filteredProducts.sort(function (x,y) {
         return x.price - y.price;
     });
-
-    for (i=0; i<10; i++) {
-        document.getElementById("testArea").innerHTML += filteredProducts[i].name;
-        document.getElementById("testArea").innerHTML += "<br>";
-    }
-    document.getElementById("testArea").innerHTML += "---<br>";
     
     // Add each product to the product selection page
     for (let productId in filteredProducts) {
 
         let productName = filteredProducts[productId].name;
-        let productPrice = currencyFormatted(filteredProducts[productId].price);
+        let productPrice = formatPrice(filteredProducts[productId].price);
         
         // Create the checkbox/input element
         let productCheckbox = document.createElement('input');
@@ -58,8 +52,6 @@ function populateListProductChoices(selectionId, listId) {
         let productLabel = document.createElement('label');
         //productLabel.htmlFor = productName;
         let productNamePrice = productName + " $" + productPrice;
-        document.getElementById("testArea").innerHTML += productNamePrice;
-        document.getElementById("testArea").innerHTML += "<br>";
         productLabel.htmlFor = productNamePrice;
 
         // Create text for checkbox label and attach to label
@@ -97,4 +89,25 @@ function selectedItems(){
 	cart.appendChild(para);
 	cart.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));
 		
+}
+
+function formatPrice(productPrice) {
+    formattedString = new String(productPrice);
+    
+    // The price is a whole number (ex: 10)
+    if (formattedString.indexOf(".") < 0) {
+        formattedString += ".00";
+    }
+
+    // The price has two decimal places (ex: 10.67), no change
+    else if (formattedString.indexOf(".") == (formattedString.length - 3)) {
+    	return formattedString;
+    }
+
+    // The price has only one decimal place (ex 10.6)
+    else if (formattedString.indexOf(".") == (formattedString.length - 2)) {
+        formattedString += "0";
+    }
+
+    return formattedString;
 }
