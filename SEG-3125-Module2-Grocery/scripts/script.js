@@ -27,11 +27,22 @@ function populateListProductChoices(selectionId, listId) {
 
     filteredProducts = restrictListProducts(products, selectionElem.value);
     console.log(filteredProducts);
+
+    // Sort the filtered products by price
+    filteredProducts.sort(function (x,y) {
+        return x.price - y.price;
+    });
+
+    for (i=0; i<10; i++) {
+        document.getElementById("testArea").innerHTML += filteredProducts[i].name;
+        document.getElementById("testArea").innerHTML += "<br>";
+    }
     
     // Add each product to the product selection page
     for (let productId in filteredProducts) {
 
-        let productName = filteredProducts[productId];
+        let productName = filteredProducts[productId].name;
+        let productPrice = filteredProducts[productId].price;
         
         // Create the checkbox/input element
         let productCheckbox = document.createElement('input');
@@ -44,7 +55,9 @@ function populateListProductChoices(selectionId, listId) {
 
         // Create checkbox label
         let productLabel = document.createElement('label');
-        productLabel.htmlFor = productName;
+        //productLabel.htmlFor = productName;
+        let productNamePrice = productName + " " + productPrice;
+        productLabel.htmlFor = productNamePrice;
 
         // Create text for checkbox label and attach to label
         let productLabelText = document.createTextNode(productName);
