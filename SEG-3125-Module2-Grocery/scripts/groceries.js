@@ -4,6 +4,7 @@ var products = [
         vegetarian: true,
         glutenFree: true,
         both: true,
+        organic: true, 
         price: 1.99
     },
     {
@@ -11,6 +12,7 @@ var products = [
         vegetarian: true,
         glutenFree: false,
         both: false,
+        organic: false, 
         price: 2.35
     },
     {
@@ -18,6 +20,7 @@ var products = [
         vegetarian: false,
         glutenFree: true,
         both: false,
+        organic: true, 
         price: 10.00
     },
     {
@@ -25,6 +28,7 @@ var products = [
         vegetarian: false,
         glutenFree: true,
         both: false,
+        organic: false, 
         price: 12.99
     },
     {
@@ -32,6 +36,7 @@ var products = [
         vegetarian: true,
         glutenFree: true,
         both: true,
+        organic: true, 
         price: 3.49
     },
     {
@@ -39,6 +44,7 @@ var products = [
         vegetarian: true,
         glutenFree: true,
         both: true,
+        organic: false, 
         price: 0.99
     },
     {
@@ -46,6 +52,7 @@ var products = [
         vegetarian: true,
         glutenFree: false,
         both: false,
+        organic: true, 
         price: 5.99
     },
     {
@@ -53,6 +60,7 @@ var products = [
         vegetarian: true,
         glutenFree: true,
         both: true,
+        organic: false, 
         price: 2.99
     },
     {
@@ -60,6 +68,7 @@ var products = [
         vegetarian: false,
         glutenFree: true,
         both: false,
+        organic: true, 
         price: 9.50
     },
     {
@@ -67,9 +76,9 @@ var products = [
         vegetarian: true,
         glutenFree: true,
         both: true,
+        organic: false, 
         price: 4.50
-    },
-   
+    }
 ];
 
 // Returns a list of products filtered by dietary restrictions
@@ -83,6 +92,12 @@ function restrictListProducts(prods, restriction) {
 			product_names.push(prods[i]);
 		}
         else if ((restriction == "Vegetarian & GlutenFree") && (prods[i].vegetarian == true) && (prods[i].glutenFree == true)){
+			product_names.push(prods[i]);
+		}
+        else if ((restriction == "Organic") && (prods[i].organic == true)){
+			product_names.push(prods[i]);
+		}
+        else if ((restriction == "Non-organic") && (prods[i].organic == false)){
 			product_names.push(prods[i]);
 		}
 		else if (restriction == "None"){
