@@ -1,69 +1,69 @@
 var products = [
     {
-        name: "broccoli",
+        name: "Broccoli",
         vegetarian: true,
         glutenFree: true,
         both: true,
         price: 1.99
     },
     {
-        name: "bread",
+        name: "Bread",
         vegetarian: true,
         glutenFree: false,
         both: false,
         price: 2.35
     },
     {
-        name: "salmon",
+        name: "Salmon",
         vegetarian: false,
         glutenFree: true,
         both: false,
         price: 10.00
     },
     {
-        name: "steak",
+        name: "Steak",
         vegetarian: false,
         glutenFree: true,
         both: false,
         price: 12.99
     },
     {
-        name: "apples",
+        name: "Apples",
         vegetarian: true,
         glutenFree: true,
         both: true,
         price: 3.49
     },
     {
-        name: "rice",
+        name: "Rice",
         vegetarian: true,
         glutenFree: true,
         both: true,
         price: 0.99
     },
     {
-        name: "peanut butter",
+        name: "Peanut butter",
         vegetarian: true,
         glutenFree: false,
         both: false,
         price: 5.99
     },
     {
-        name: "almond milk",
+        name: "Almond milk",
         vegetarian: true,
         glutenFree: true,
         both: true,
         price: 2.99
     },
     {
-        name: "chicken breast",
+        name: "Chicken breast",
         vegetarian: false,
         glutenFree: true,
         both: false,
         price: 9.50
     },
     {
-        name: "cheese",
+        name: "Cheese",
         vegetarian: true,
         glutenFree: true,
         both: true,
