@@ -96,3 +96,28 @@ footer {
     text-align: center;
     width: 100%;
 }
+/* Style the preferences container */
+.preferences-container {
+    display: flex;
+    justify-content: space-evenly; /* This will create space around the elements */
+    margin-top: 20px;
+}
+
+/* Style the preference columns */
+.preference-column {
+    margin: 0 10px;
+    text-align: center; /* Center text and dropdowns */
+}
+
+/* Style for preference buttons */
+.preferences-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.preferences-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
