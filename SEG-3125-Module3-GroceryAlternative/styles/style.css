@@ -51,6 +51,7 @@ header {
     min-height: calc(100vh - 200px); /* Adjust the 200px to account for your header and footer */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack children vertically */
+    flex-wrap: wrap; /* Wrap children to next line when needed */
     align-items: center; /* Center items horizontally */
     text-align: center; /* Center the text within the tab */
     justify-content: center; /* Center items vertically */
@@ -65,6 +66,12 @@ header {
 .tabcontent h2, .tabcontent p, .tabcontent select, .tabcontent button {
     text-align: center;
     margin: 10px 0; /* This adds uniform spacing above and below the elements */
+}
+
+/* Style sidebars */
+.sidebar {
+    background-color: #ddd;
+    flex: 1;
 }
 
 /* Style the footer */
@@ -82,6 +89,21 @@ footer {
     clear: both;
     display: table;
 }
+
+/* Horizontal flexbox container */
+.flexHorizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+#productsSidebar {
+    flex: 1;
+}
+
+#productsMain {
+    flex: 2;
+}
+
 /* Additional style for the shopping cart items to ensure they are centered */
 #displayCart {
     width: 100%;
