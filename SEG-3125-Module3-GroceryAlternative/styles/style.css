@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Lobster&display=swap');
+
+/* Style the header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF6169; /* Adjusted color */
+    color: white;
+    padding: 10px;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+
+/* Style for the tab container */
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab container */
+.tab button {
+    flex: 1; /* New line - makes all buttons equal width */
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    font-family: Dosis;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    min-height: calc(100vh - 200px); /* Adjust the 200px to account for your header and footer */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center the text within the tab */
+    justify-content: center; /* Center items vertically */
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    margin-top: 20px; /* Add some margin at the top */
+    min-height: calc(100vh - 120px); /* Adjust the 120px to account for your header and footer */
+    font-family: Dosis;
+}
+
+.tabcontent h2, .tabcontent p, .tabcontent select, .tabcontent button {
+    text-align: center;
+    margin: 10px 0; /* This adds uniform spacing above and below the elements */
+}
+
+/* Style the footer */
+footer {
+    background-color: #FF6169; /* Dark gray background */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-family: Dosis;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* Additional style for the shopping cart items to ensure they are centered */
+#displayCart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure that individual items within the shopping cart are also centered */
+#displayCart p, #displayCart h2 {
+    text-align: center;
+    width: 100%;
+}
+/* Style the preferences container */
+.preferences-container {
+    display: flex;
+    justify-content: space-evenly; /* This will create space around the elements */
+    margin-top: 20px;
+}
+
+/* Style the preference columns */
+.preference-column {
+    margin: 0 10px;
+    text-align: center; /* Center text and dropdowns */
+}
+
+/* Style for preference buttons */
+.preferences-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.preferences-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
