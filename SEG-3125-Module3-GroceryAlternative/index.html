@@ -22,32 +22,32 @@
     <div id="Client" class="tabcontent">
         <h2>Client Information</h2>
         <p>Let's get to know you better.</p>
-        Choose a diet option:
-            <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-            <option value="" selected disabled hidden>Choose an option</option>
-            <option value="Vegetarian">Vegetarian</option>
-            <option value="GlutenFree">GlutenFree</option>
-            <option value="Vegetarian & GlutenFree">Vegetarian & GlutenFree</option>
-            <option value="None">None</option>
-            </select>
-        <br>
-        Choose a preference:
-            <select id="preference" name="preference" onchange="populateListProductChoices(this.id, 'displayProduct')">
-            <option value="" selected disabled hidden>Choose an option</option>
-            <option value="Organic">Organic</option>
-            <option value="Non-organic">Non-organic</option>
-            <option value="None">None</option>
-            </select>
     </div>
 
     <div id="Products" class="tabcontent">
         <div class="flexHorizontal">
             <div id="productsSidebar" class="sidebar">
+                <h3>Diet Preferences</h3>
+                <label for="dietSelect">Diet:</label>
+                <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+                <option value="" selected disabled hidden>Choose an option</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="GlutenFree">Gluten Free</option>
+                <option value="Vegetarian & GlutenFree">Vegetarian & GlutenFree</option>
+                <option value="None">None</option>
+                </select><br>
+                <label for="preference">Preferences:</label>
+                <select id="preference" name="preference" onchange="populateListProductChoices(this.id, 'displayProduct')">
+                <option value="" selected disabled hidden>Choose an option</option>
+                <option value="Organic">Organic</option>
+                <option value="Non-organic">Non-organic</option>
+                <option value="None">None</option>
+                </select>
                 <h3>Sorting</h3>
                 <label for="productSort">Sort Products by</label>
                 <select id="productSort" name="productSort" onchange="//to be added">
+                    <option value="sortPrice" selected>Price</option>
                     <option value="sortName" selected>Name</option>
-                    <option value="sortPrice">Price</option>
                 </select>
                 <h3>Filter by Category</h3>
                 <input type="checkbox" id="categoryFruit" name="categoryFruit" value="1">
