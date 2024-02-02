@@ -151,6 +151,13 @@ footer {
     flex: 1; /* Adjust as needed, or set a specific width */
     padding: 0 10px; /* Add padding as necessary */
 }
+
+.product-image {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    margin-right: 10px; /* Adjust spacing as needed */
+}
+
 .counter {
     display: flex;
     align-items: center;

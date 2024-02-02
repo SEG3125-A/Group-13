@@ -42,9 +42,15 @@ function populateListProductChoices(selectionId, listId) {
         let productName = product.name;
         let productPrice = formatPrice(product.price);
 
+        let productImage = document.createElement('img');
+        productImage.src = product.image; // Set the image source to the product's image URL
+        productImage.alt = productName;
+        productImage.classList.add('product-image'); // Ensure you have CSS styles for this class
+        
         // Create product container
         let productContainer = document.createElement('div');
         productContainer.classList.add('product-item');
+        productContainer.appendChild(productImage); // Append the image element
 
         // Product name div
         let productNameDiv = document.createElement('div');
@@ -77,6 +83,7 @@ function populateListProductChoices(selectionId, listId) {
         subtractButton.classList.add('subtract-button');
         subtractButton.onclick = function() { removeFromCart(productName); };
 
+        
         // Assemble counterDiv
         counterDiv.appendChild(subtractButton);
         counterDiv.appendChild(counterSpan);
