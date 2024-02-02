@@ -44,12 +44,20 @@
         <div class="flexHorizontal">
             <div id="productsSidebar" class="sidebar">
                 <h3>Sorting</h3>
-                <label for="productSort">Sort Products by:</label>
+                <label for="productSort">Sort Products by</label>
                 <select id="productSort" name="productSort" onchange="//to be added">
                     <option value="sortName" selected>Name</option>
                     <option value="sortPrice">Price</option>
                 </select>
-                <h3>Product Categories</h3>
+                <h3>Filter by Category</h3>
+                <input type="checkbox" id="categoryFruit" name="categoryFruit" value="1">
+                <label for="categoryFruit"> Fruits</label><br>
+                <input type="checkbox" id="categoryVeggie" name="categoryVeggie" value="1">
+                <label for="categoryVeggie"> Vegetables</label><br>
+                <input type="checkbox" id="categoryMeat" name="categoryMeat" value="1">
+                <label for="categoryMeat"> Meats</label><br>
+                <input type="checkbox" id="categoryDairy" name="categoryDairy" value="1">
+                <label for="categoryDairy"> Dairy</label><br>
             </div>
             <div id="productsMain">
             <h2>Our Products</h2>
