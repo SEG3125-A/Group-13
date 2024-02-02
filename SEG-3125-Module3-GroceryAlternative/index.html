@@ -28,36 +28,36 @@
         <div class="flexHorizontal">
             <div id="productsSidebar" class="sidebar">
                 <h3>Diet Preferences</h3>
-                <label for="dietSelect">Diet:</label>
-                <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-                <option value="" selected disabled hidden>Choose an option</option>
-                <option value="Vegetarian">Vegetarian</option>
-                <option value="GlutenFree">Gluten Free</option>
-                <option value="Vegetarian & GlutenFree">Vegetarian & GlutenFree</option>
-                <option value="None">None</option>
-                </select><br>
-                <label for="preference">Preferences:</label>
-                <select id="preference" name="preference" onchange="populateListProductChoices(this.id, 'displayProduct')">
-                <option value="" selected disabled hidden>Choose an option</option>
-                <option value="Organic">Organic</option>
-                <option value="Non-organic">Non-organic</option>
-                <option value="None">None</option>
-                </select>
+                    <label for="dietSelect">Diet:</label>
+                    <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+                        <option value="" selected disabled hidden>Choose an option</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="GlutenFree">Gluten Free</option>
+                        <option value="Vegetarian & GlutenFree">Vegetarian & Gluten Free</option>
+                        <option value="None">None</option>
+                    </select><br>
+                    <label for="preference">Organic:</label>
+                    <select id="preference" name="preference" onchange="populateListProductChoices(this.id, 'displayProduct')">
+                        <option value="" selected disabled hidden>Choose an option</option>
+                        <option value="Organic">Organic</option>
+                        <option value="Non-organic">Non-organic</option>
+                        <option value="None">None</option>
+                    </select>
                 <h3>Sorting</h3>
-                <label for="productSort">Sort Products by</label>
-                <select id="productSort" name="productSort" onchange="//to be added">
-                    <option value="sortPrice" selected>Price</option>
-                    <option value="sortName" selected>Name</option>
-                </select>
+                    <label for="productSort">Sort Products by</label>
+                    <select id="productSort" name="productSort" onchange="//to be added">
+                        <option value="sortPrice" selected>Price</option>
+                        <option value="sortName" selected>Name</option>
+                    </select>
                 <h3>Filter by Category</h3>
-                <input type="checkbox" id="categoryFruit" name="categoryFruit" value="1">
-                <label for="categoryFruit"> Fruits</label><br>
-                <input type="checkbox" id="categoryVeggie" name="categoryVeggie" value="1">
-                <label for="categoryVeggie"> Vegetables</label><br>
-                <input type="checkbox" id="categoryMeat" name="categoryMeat" value="1">
-                <label for="categoryMeat"> Meats</label><br>
-                <input type="checkbox" id="categoryDairy" name="categoryDairy" value="1">
-                <label for="categoryDairy"> Dairy</label><br>
+                    <input type="checkbox" id="categoryFruit" name="categoryFruit" value="1">
+                    <label for="categoryFruit"> Fruits</label><br>
+                    <input type="checkbox" id="categoryVeggie" name="categoryVeggie" value="1">
+                    <label for="categoryVeggie"> Vegetables</label><br>
+                    <input type="checkbox" id="categoryMeat" name="categoryMeat" value="1">
+                    <label for="categoryMeat"> Meats</label><br>
+                    <input type="checkbox" id="categoryDairy" name="categoryDairy" value="1">
+                    <label for="categoryDairy"> Dairy</label><br>
             </div>
             <div id="productsMain">
             <h2>Our Products</h2>
