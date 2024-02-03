@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery Store</title>
+    <title>Metrostore - Grocery Store</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body onload="populateListProductChoices('displayProduct')">
@@ -14,50 +14,45 @@
     <!-- Tab links -->
     <div class="tab">
         <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-        <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+        <button class="tablinks" id="cartTab" onclick="openInfo(event, 'Cart')">Cart</button>
     </div>
     
     <!-- Tab content -->
     <div id="Products" class="tabcontent">
         <div class="flexHorizontal">
             <div id="productsSidebar" class="sidebar">
-                    <!-- <label for="productSort">Sort Products by</label>
-                    <select id="productSort" name="productSort" onchange="//to be added">
-                        <option value="sortPrice" selected>Price</option>
-                        <option value="sortName">Alphabetical Order</option>
-                    </select> -->
-                    <label for="dietSelect"><h3>Diet Preferences</h3></label>
-                    <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices('displayProduct')">
-                        <option value="None" selected>No Preference</option>
-                        <option value="Vegetarian">Vegetarian</option>
-                        <option value="GlutenFree">Gluten Free</option>
-                        <option value="Vegetarian & GlutenFree">Vegetarian & Gluten Free</option>
-                    </select><br>
-                    <label><h3>Organic Preferences</h3></label>
-                    <input type="radio" id="organicAndNon" name="organicSelect" value="None" onchange="populateListProductChoices('displayProduct')" checked>
-                    <label for="organicAndNon">No Preference</label><br>
-                    <input type="radio" id="organic" name="organicSelect" value="Organic" onchange="populateListProductChoices('displayProduct')">
-                    <label for="organic">Organic</label><br>
-                    <input type="radio" id="nonOrganic" name="organicSelect" value="Non-organic" onchange="populateListProductChoices('displayProduct')">
-                    <label for="nonOrganic">Non-organic</label><br>
+                <label for="dietSelect"><h3>Diet Preferences</h3></label>
+                <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices('displayProduct')">
+                    <option value="None" selected>No Preference</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="GlutenFree">Gluten Free</option>
+                    <option value="Vegetarian & GlutenFree">Vegetarian & Gluten Free</option>
+                </select><br>
+                <h3>Organic Preferences</h3>
+                <input type="radio" id="organicAndNon" name="organicSelect" value="None" onchange="populateListProductChoices('displayProduct')" checked>
+                <label for="organicAndNon">No Preference</label><br>
+                <input type="radio" id="organic" name="organicSelect" value="Organic" onchange="populateListProductChoices('displayProduct')">
+                <label for="organic">Organic</label><br>
+                <input type="radio" id="nonOrganic" name="organicSelect" value="Non-organic" onchange="populateListProductChoices('displayProduct')">
+                <label for="nonOrganic">Non-organic</label><br>
                 <h3>Show Products in Category</h3>
-                    <input type="checkbox" id="categoryFruit" name="categoryFruit" value="1" onchange="populateListProductChoices('displayProduct')" checked>
-                    <label for="categoryFruit"> Fruits</label><br>
-                    <input type="checkbox" id="categoryVeggie" name="categoryVeggie" value="1" onchange="populateListProductChoices('displayProduct')" checked>
-                    <label for="categoryVeggie"> Vegetables</label><br>
-                    <input type="checkbox" id="categoryMeat" name="categoryMeat" value="1" onchange="populateListProductChoices('displayProduct')" checked>
-                    <label for="categoryMeat"> Meats</label><br>
-                    <input type="checkbox" id="categoryDairy" name="categoryDairy" value="1" onchange="populateListProductChoices('displayProduct')" checked>
-                    <label for="categoryDairy"> Dairy</label><br>
-                    <input type="checkbox" id="categoryOther" name="categoryOther" value="1" onchange="populateListProductChoices('displayProduct')" checked>
-                    <label for="categoryOther"> Other</label><br>
+                <input type="checkbox" id="categoryFruit" name="categoryFruit" value="1" onchange="populateListProductChoices('displayProduct')" checked>
+                <label for="categoryFruit"> Fruits</label><br>
+                <input type="checkbox" id="categoryVeggie" name="categoryVeggie" value="1" onchange="populateListProductChoices('displayProduct')" checked>
+                <label for="categoryVeggie"> Vegetables</label><br>
+                <input type="checkbox" id="categoryMeat" name="categoryMeat" value="1" onchange="populateListProductChoices('displayProduct')" checked>
+                <label for="categoryMeat"> Meats</label><br>
+                <input type="checkbox" id="categoryDairy" name="categoryDairy" value="1" onchange="populateListProductChoices('displayProduct')" checked>
+                <label for="categoryDairy"> Dairy</label><br>
+                <input type="checkbox" id="categoryOther" name="categoryOther" value="1" onchange="populateListProductChoices('displayProduct')" checked>
+                <label for="categoryOther"> Other</label><br>
             </div>
             <div id="productsMain">
-            <h2>Products</h2>
-            <p>We preselected products based on your preferences.</p>
-            <hr>
+                <h2>Products</h2>
+                <p>We preselected products based on your preferences.</p>
+                <hr>
                 <div id="displayProduct"></div>
-                <button id="addCart" type="button" class="block" onclick="selectedItems()">
+                <button id="addCart" type="button" class="block" onclick="selectedItems(); document.getElementById('cartTab').click();">
                 Update Cart
                 </button>
             </div>

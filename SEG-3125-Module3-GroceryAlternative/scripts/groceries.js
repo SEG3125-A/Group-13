@@ -60,7 +60,7 @@ var products = [
         image: "images/Jasmine Rice.png"
     },
     {
-        name: "Peanut butter",
+        name: "Peanut Butter",
         category: "other",
         vegetarian: true,
         glutenFree: false,
@@ -70,7 +70,7 @@ var products = [
         image: "images/Peanut Butter.png"
     },
     {
-        name: "Almond milk",
+        name: "Almond Milk",
         category: "other",
         vegetarian: true,
         glutenFree: true,
@@ -80,7 +80,7 @@ var products = [
         image: "images/Almond milk.png"
     },
     {
-        name: "Chicken breast",
+        name: "Chicken Breast",
         category: "meat",
         vegetarian: false,
         glutenFree: true,
@@ -111,7 +111,7 @@ var products = [
     },
     {
         name: "Oranges",
-        category: "other",
+        category: "fruit",
         vegetarian: true,
         glutenFree: true,
         both: true,

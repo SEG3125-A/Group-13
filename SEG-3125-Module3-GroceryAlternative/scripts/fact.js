@@ -56,7 +56,7 @@ var facts = [
     },
     {
         factID: "bananas radioactive",
-        text: "Did you know that bananas are radioactive? THey set off detectors at the borders!",
+        text: "Did you know that bananas are radioactive? They set off detectors at the borders!",
         factnum: 11
     },
     {
