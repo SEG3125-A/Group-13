@@ -1,3 +1,6 @@
+// A global cart object to keep track of added items
+var cart = {};
+
 function openInfo(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -32,63 +35,121 @@ function populateListProductChoices(listId) {
     filteredProducts.sort(function (x,y) {
         return x.price - y.price;
     });
-    
+
     // Add each product to the product selection page
     for (let productId in filteredProducts) {
+        let product = filteredProducts[productId];
+        let productName = product.name;
+        let productPrice = formatPrice(product.price);
 
-        let productName = filteredProducts[productId].name;
-        let productPrice = formatPrice(filteredProducts[productId].price);
+        let productImage = document.createElement('img');
+        productImage.src = product.image; // Set the image source to the product's image URL
+        productImage.alt = productName;
+        productImage.classList.add('product-image'); // Ensure you have CSS styles for this class
         
-        // Create the checkbox/input element
-        let productCheckbox = document.createElement('input');
+        // Create product container
+        let productContainer = document.createElement('div');
+        productContainer.classList.add('product-item');
+        productContainer.appendChild(productImage); // Append the image element
 
-        // Set the attributes to created checkbox
-        productCheckbox.type = 'checkbox';
-        productCheckbox.id = productName;
-        productCheckbox.name = 'product';
-        productCheckbox.value = productName;
+        // Product name div
+        let productNameDiv = document.createElement('div');
+        productNameDiv.textContent = productName;
+        productNameDiv.classList.add('product-name');
 
-        // Create checkbox label
-        let productLabel = document.createElement('label');
-        //productLabel.htmlFor = productName;
-        let productNamePrice = productName + " $" + productPrice;
-        productLabel.htmlFor = productNamePrice;
+        // Product price div
+        let productPriceDiv = document.createElement('div');
+        productPriceDiv.textContent = `$${productPrice}`;
+        productPriceDiv.classList.add('product-price');
 
-        // Create text for checkbox label and attach to label
-        let productLabelText = document.createTextNode(productNamePrice);
-        productLabel.appendChild(productLabelText);
+        // Counter and buttons div
+        let counterDiv = document.createElement('div');
+        counterDiv.classList.add('counter');
 
-        // Add elements to HTML DOM
-        listElement.appendChild(productCheckbox);
-        listElement.appendChild(productLabel);
-        listElement.appendChild(document.createElement('br')); // Add a line break
+        // Counter span
+        let counterSpan = document.createElement('span');
+        counterSpan.id = 'count-' + productName;
+        counterSpan.textContent = '0'; // Start with zero count
+        counterSpan.classList.add('counter-span');
+
+        // Add and subtract buttons
+        let addButton = document.createElement('button');
+        addButton.textContent = '+';
+        addButton.classList.add('add-button');
+        addButton.onclick = function() { addToCart(productName, product.price); };
+
+        let subtractButton = document.createElement('button');
+        subtractButton.textContent = '-';
+        subtractButton.classList.add('subtract-button');
+        subtractButton.onclick = function() { removeFromCart(productName); };
+
+        
+        // Assemble counterDiv
+        counterDiv.appendChild(subtractButton);
+        counterDiv.appendChild(counterSpan);
+        counterDiv.appendChild(addButton);
+
+        // Assemble productContainer
+        productContainer.appendChild(productNameDiv);
+        productContainer.appendChild(productPriceDiv);
+        productContainer.appendChild(counterDiv);
+
+        // Append productContainer to listElement
+        listElement.appendChild(productContainer);
     }
 }
 
+// Function to handle adding items to the cart
+function addToCart(productName, price) {
+    if (!cart[productName]) {
+        cart[productName] = { count: 0, price: price };
+    }
+    cart[productName].count++;
+    console.log('Adding to cart:', productName, 'New count:', cart[productName].count); // Debug log
+    updateCounterDisplay(productName);
+}
+
+// Function to handle removing items from the cart
+function removeFromCart(productName) {
+    if (cart[productName] && cart[productName].count > 0) {
+        cart[productName].count--;
+        console.log('Removing from cart:', productName, 'New count:', cart[productName].count); // Debug log
+        updateCounterDisplay(productName);
+    }
+}
+
+// Function to update the counter display for a product
+function updateCounterDisplay(productName) {
+    var counterElement = document.getElementById('count-' + productName);
+    if (counterElement) {
+        console.log('Updating UI for:', productName, 'Count:', cart[productName].count); // Debug log
+        counterElement.textContent = cart[productName].count;
+    }
+}
+
+
 // Build cart page when items are added to cart
 function selectedItems(){
-	var products = document.getElementsByName("product");
-	var chosenProducts = [];
-	
-	var cart = document.getElementById('displayCart');
-	cart.innerHTML = "";
-	
-	// Build list of selected item
-	var para = document.createElement("p");
-	para.innerHTML = "You selected: ";
-	para.appendChild(document.createElement("br"));
-	for (i = 0; i < products.length; i++) { 
-		if (products[i].checked) {
-			para.appendChild(document.createTextNode(products[i].value));
-			para.appendChild(document.createElement("br"));
-			chosenProducts.push(products[i].value);
-		}
-	}
-		
-	// add paragraph and total price
-	cart.appendChild(para);
-	cart.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));
-		
+    var cartElement = document.getElementById('displayCart');
+    cartElement.innerHTML = "";
+    
+    var para = document.createElement("p");
+    para.innerHTML = "You selected: ";
+    para.appendChild(document.createElement("br"));
+
+    var totalPrice = 0;
+
+    for (var item in cart) {
+        if (cart[item].count > 0) {
+            para.appendChild(document.createTextNode(item + " x " + cart[item].count));
+            para.appendChild(document.createElement("br"));
+            totalPrice += cart[item].count * cart[item].price;
+        }
+    }
+    
+    // add paragraph and total price
+    cartElement.appendChild(para);
+    cartElement.appendChild(document.createTextNode("Total Price is $" + totalPrice.toFixed(2)));
 }
 
 function formatPrice(productPrice) {

@@ -143,3 +143,54 @@ footer {
     font-size: 17px;
     cursor: pointer;
 }
+
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee; /* A light line between items */
+}
+
+.product-price {
+    text-align: center; /* Center the text */
+    /* If you're using flexbox to layout the items: */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure that the container for the product items is styled as a flex container */
+.product-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0; /* Add padding as necessary */
+}
+
+/* If each product item is a flex item in a row, you can set a flex-basis or width */
+.product-name, .product-price, .counter {
+    flex: 1; /* Adjust as needed, or set a specific width */
+    padding: 0 10px; /* Add padding as necessary */
+}
+
+.product-image {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    margin-right: 10px; /* Adjust spacing as needed */
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+}
+
+.add-button, .subtract-button {
+    margin: 0 5px;
+    padding: 5px 10px; /* Adjust the padding to fit your design */
+}
+
+.counter-span {
+    min-width: 20px;
+    text-align: center;
+}
