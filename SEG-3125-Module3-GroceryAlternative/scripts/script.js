@@ -22,13 +22,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 // Populate the products list based on the dietary restrictions chosen
-function populateListProductChoices(selectionId, listId) {
+function populateListProductChoices(listId) {
     let listElement = document.getElementById(listId);
-    let selectionElem = document.getElementById(selectionId);
+    //let selectionElem = document.getElementById(selectionId);
 
     listElement.innerHTML = ''; // Clear product list before filling it
 
-    filteredProducts = restrictListProducts(products, selectionElem.value);
+    filteredProducts = restrictListProducts(products);
     console.log(filteredProducts);
 
     // Sort the filtered products by price

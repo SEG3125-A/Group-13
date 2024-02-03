@@ -1,6 +1,7 @@
 var products = [
     {
         name: "Broccoli",
+        category: "veggie",
         vegetarian: true,
         glutenFree: true,
         both: true,
@@ -10,6 +11,7 @@ var products = [
     },
     {
         name: "Whole Wheat Bread",
+        category: "other",
         vegetarian: true,
         glutenFree: false,
         both: false,
@@ -19,6 +21,7 @@ var products = [
     },
     {
         name: "Salmon",
+        category: "meat",
         vegetarian: false,
         glutenFree: true,
         both: false,
@@ -28,6 +31,7 @@ var products = [
     },
     {
         name: "Steak",
+        category: "meat",
         vegetarian: false,
         glutenFree: true,
         both: false,
@@ -37,6 +41,7 @@ var products = [
     },
     {
         name: "Apples",
+        category: "fruit",
         vegetarian: true,
         glutenFree: true,
         both: true,
@@ -46,6 +51,7 @@ var products = [
     },
     {
         name: "Jasmine Rice",
+        category: "other",
         vegetarian: true,
         glutenFree: true,
         both: true,
@@ -55,6 +61,7 @@ var products = [
     },
     {
         name: "Peanut butter",
+        category: "other",
         vegetarian: true,
         glutenFree: false,
         both: false,
@@ -64,6 +71,7 @@ var products = [
     },
     {
         name: "Almond milk",
+        category: "other",
         vegetarian: true,
         glutenFree: true,
         both: true,
@@ -73,6 +81,7 @@ var products = [
     },
     {
         name: "Chicken breast",
+        category: "meat",
         vegetarian: false,
         glutenFree: true,
         both: false,
@@ -82,6 +91,7 @@ var products = [
     },
     {
         name: "Cheese",
+        category: "dairy",
         vegetarian: true,
         glutenFree: true,
         both: true,
@@ -91,28 +101,65 @@ var products = [
     }
 ];
 
-// Returns a list of products filtered by dietary restrictions
-function restrictListProducts(prods, restriction) {
+// Returns a list of products filtered by dietary restrictions and filters
+function restrictListProducts(prods) {
+    let dietRestriction = document.getElementById('dietSelect').value;
+
+    // querySelector code used from: https://www.tutorialspoint.com/how-to-get-value-of-selected-radio-button-using-javascript
+    let organicRestriction = document.querySelector('input[type=radio][name="organicSelect"]:checked').value;
+
+    let fruitChecked = document.getElementById('categoryFruit').checked;
+    let veggieChecked = document.getElementById('categoryVeggie').checked;
+    let meatChecked = document.getElementById('categoryMeat').checked;
+    let dairyChecked = document.getElementById('categoryDairy').checked;
+    let otherChecked = document.getElementById('categoryOther').checked;
+
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push(prods[i]);
+
+        /* Using guard clauses for filtering is easier to maintain */
+
+        /* Dietary Preference Filter */
+		if ((dietRestriction == "Vegetarian") && !(prods[i].vegetarian == true)){
+			continue;
 		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i]);
+		else if ((dietRestriction == "GlutenFree") && !(prods[i].glutenFree == true)){
+			continue;
 		}
-        else if ((restriction == "Vegetarian & GlutenFree") && (prods[i].vegetarian == true) && (prods[i].glutenFree == true)){
-			product_names.push(prods[i]);
+        else if ((dietRestriction == "Vegetarian & GlutenFree") && !(prods[i].vegetarian == true) && (prods[i].glutenFree == true)){
+			continue;
 		}
-        else if ((restriction == "Organic") && (prods[i].organic == true)){
-			product_names.push(prods[i]);
+        
+        /* Organic Filter */
+        if ((organicRestriction == "Organic") && !(prods[i].organic == true)){
+			continue;
 		}
-        else if ((restriction == "Non-organic") && (prods[i].organic == false)){
-			product_names.push(prods[i]);
+        else if ((organicRestriction == "Non-organic") && !(prods[i].organic == false)){
+			continue;
 		}
-		else if (restriction == "None"){
-			product_names.push(prods[i]);
-		}
+
+        /* Product Category Filter */
+        if ((prods[i].category == "fruit") && !(fruitChecked)) {
+            continue;
+        }
+        
+        if ((prods[i].category == "veggie") && !(veggieChecked)) {
+            continue;
+        }
+        
+        if ((prods[i].category == "meat") && !(meatChecked)) {
+            continue;
+        }
+        
+        if ((prods[i].category == "dairy") && !(dairyChecked)) {
+            continue;
+        }
+
+        if ((prods[i].category == "other") && !(otherChecked)) {
+            continue;
+        }
+
+        product_names.push(prods[i]); // It has not been caught by any of the filters above; add it to the list
 	}
 	return product_names;
 }
