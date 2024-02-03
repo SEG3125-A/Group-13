@@ -216,3 +216,19 @@ footer {
   .block:hover {
     background-color: #FF6169;
   }
+
+.factBox {
+    margin:auto;
+    width: 40%;
+    border: 3px solid #FF6169;
+    border-radius: 16px;
+}
+
+.factText {
+    font-size: 20px;
+}
+
+.factClick {
+    font-size: 15px;
+    font-style: italic;
+}
