@@ -5,15 +5,17 @@ var products = [
         glutenFree: true,
         both: true,
         organic: true, 
-        price: 1.99
+        price: 1.99,
+        image: "images/Broccoli.jpg"
     },
     {
-        name: "Bread",
+        name: "Whole Wheat Bread",
         vegetarian: true,
         glutenFree: false,
         both: false,
         organic: false, 
-        price: 2.35
+        price: 2.35,
+        image: "images/Whole Wheat Bread.jpg"
     },
     {
         name: "Salmon",
@@ -21,7 +23,8 @@ var products = [
         glutenFree: true,
         both: false,
         organic: true, 
-        price: 10.00
+        price: 10.00,
+        image: "images/Salmon.jpg"
     },
     {
         name: "Steak",
@@ -29,7 +32,8 @@ var products = [
         glutenFree: true,
         both: false,
         organic: false, 
-        price: 12.99
+        price: 12.99,
+        image: "images/Steak.jpg"
     },
     {
         name: "Apples",
@@ -37,15 +41,17 @@ var products = [
         glutenFree: true,
         both: true,
         organic: true, 
-        price: 3.49
+        price: 3.49,
+        image: "images/apples.jpg"
     },
     {
-        name: "Rice",
+        name: "Jasmine Rice",
         vegetarian: true,
         glutenFree: true,
         both: true,
         organic: false, 
-        price: 0.99
+        price: 0.99,
+        image: "images/Jasmine Rice.png"
     },
     {
         name: "Peanut butter",
@@ -53,7 +59,8 @@ var products = [
         glutenFree: false,
         both: false,
         organic: true, 
-        price: 5.99
+        price: 5.99,
+        image: "images/Peanut Butter.png"
     },
     {
         name: "Almond milk",
@@ -61,7 +68,8 @@ var products = [
         glutenFree: true,
         both: true,
         organic: false, 
-        price: 2.99
+        price: 2.99,
+        image: "images/Almond milk.png"
     },
     {
         name: "Chicken breast",
@@ -69,7 +77,8 @@ var products = [
         glutenFree: true,
         both: false,
         organic: true, 
-        price: 9.50
+        price: 9.50,
+        image: "images/Chicken Breast.png"
     },
     {
         name: "Cheese",
@@ -77,7 +86,8 @@ var products = [
         glutenFree: true,
         both: true,
         organic: false, 
-        price: 4.50
+        price: 4.50,
+        image: "images/Cracker Barrel Marble.jpg"
     }
 ];
 
