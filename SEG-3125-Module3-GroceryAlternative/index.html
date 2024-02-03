@@ -13,17 +13,11 @@
 
     <!-- Tab links -->
     <div class="tab">
-        <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
         <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
         <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
     </div>
     
     <!-- Tab content -->
-    <div id="Client" class="tabcontent">
-        <h2>Client Information</h2>
-        <p>Let's get to know you better.</p>
-    </div>
-
     <div id="Products" class="tabcontent">
         <div class="flexHorizontal">
             <div id="productsSidebar" class="sidebar">
@@ -65,7 +59,7 @@
                 Choose items to buy:
                 <div id="displayProduct"></div>
                 <button id="addCart" type="button" class="block" onclick="selectedItems()">
-                Add selected items to cart.
+                Update cart with selected items.
                 </button>
             </div>
         </div>
