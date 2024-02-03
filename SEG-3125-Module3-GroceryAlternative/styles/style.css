@@ -178,6 +178,7 @@ footer {
     width: 100px; /* Adjust as needed */
     height: auto;
     margin-right: 10px; /* Adjust spacing as needed */
+    margin-left: 10px;
 }
 
 .counter {
@@ -188,9 +189,30 @@ footer {
 .add-button, .subtract-button {
     margin: 0 5px;
     padding: 5px 10px; /* Adjust the padding to fit your design */
+    border-radius: 20px;
+    /* background-color: #fbe3e4; */
 }
 
 .counter-span {
     min-width: 20px;
     text-align: center;
 }
+
+.block {
+    /* display: block; */
+    width: 40%;
+    border: none;
+    background-color: #ff7a80;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    font-family: Dosis;
+    font-size: 20px;
+    border-radius: 16px;
+  }
+
+  .block:hover {
+    background-color: #FF6169;
+  }
