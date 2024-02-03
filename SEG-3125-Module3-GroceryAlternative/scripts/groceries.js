@@ -94,7 +94,9 @@ var products = [
 // Returns a list of products filtered by dietary restrictions and filters
 function restrictListProducts(prods) {
     let dietRestriction = document.getElementById('dietSelect').value;
-    let organicRestriction = document.getElementById('preference').value;
+
+    // querySelector code used from: https://www.tutorialspoint.com/how-to-get-value-of-selected-radio-button-using-javascript
+    let organicRestriction = document.querySelector('input[type=radio][name="organicSelect"]:checked').value;
 
     let fruitChecked = document.getElementById('categoryFruit').checked;
     let veggieChecked = document.getElementById('categoryVeggie').checked;
