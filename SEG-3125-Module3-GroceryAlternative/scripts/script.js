@@ -172,3 +172,7 @@ function formatPrice(productPrice) {
 
     return formattedString;
 }
+
+function checkoutAlert() {
+    alert("Thank you for shopping at Metrostore!");
+}
