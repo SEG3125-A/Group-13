@@ -37,7 +37,7 @@ var products = [
         both: false,
         organic: false, 
         price: 12.99,
-        image: "images/Steak.jpg"
+        image: "images/Steak.png"
     },
     {
         name: "Apples",
@@ -98,6 +98,26 @@ var products = [
         organic: false, 
         price: 4.50,
         image: "images/Cracker Barrel Marble.jpg"
+    },
+    {
+        name: "Spaghetti",
+        category: "other",
+        vegetarian: true,
+        glutenFree: false,
+        both: false,
+        organic: false,
+        price: 1.27,
+        image:"images/Spaghetti.png"
+    },
+    {
+        name: "Oranges",
+        category: "other",
+        vegetarian: true,
+        glutenFree: true,
+        both: true,
+        organic: true,
+        price: 3.49,
+        image:"images/Oranges.png"
     }
 ];
 
