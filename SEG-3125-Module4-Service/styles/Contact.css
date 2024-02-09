@@ -1,3 +1,20 @@
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.75); /* Adjust the default color as needed */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+}
+
+/* Hover style for navbar links */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f7df0e; /* Color of text on hover */
+    transform: translateY(-2px); /* Slightly raise the link on hover */
+}
+
+/* Active link style */
+.navbar-dark .navbar-nav .nav-item.active .nav-link {
+    color: #ffffff; /* More prominent color for the active link */
+    transform: none; /* No transform for active link */
+}
+
 .contact-section {
     color: white;
     background-color: #5c5959; /* Adjust the color to match your theme */
