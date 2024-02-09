@@ -1,0 +1,40 @@
+.contact-section {
+    color: white;
+    background-color: #5c5959; /* Adjust the color to match your theme */
+    padding: 100px 0;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form .form-control {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: white;
+    margin-bottom: 1.5rem; /* Added margin-bottom to each input for spacing */
+}
+
+.contact-form .btn-primary {
+    background-color: #222; /* Adjust the color to match your theme */
+    border: 1px solid #fff;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: #444; /* Adjust the color for hover state */
+}
+
+/* Styles for the heading and underline */
+.contact-heading h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.underline {
+    width: 75px;
+    height: 2px;
+    background-color: #fff;
+    margin: auto;
+    margin-bottom: 2rem;
+}

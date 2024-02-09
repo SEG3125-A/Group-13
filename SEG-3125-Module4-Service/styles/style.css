@@ -1,6 +1,6 @@
 /* Adjusting the width of the carousel */
 #mainCarousel {
-  max-width: 1800px;
+  max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -20,4 +20,13 @@
   height: 100%;
   object-fit: cover;
 }
+.price {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 
+/* Add additional padding to the top of the container to ensure it's not covered by the fixed navbar */
+.container.mt-5.pt-5 {
+  padding-top: calc(var(--bs-gutter-x) * 2.5); /* Adjust the multiplier as needed for your navbar height */
+}
