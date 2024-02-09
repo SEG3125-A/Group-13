@@ -1,0 +1,23 @@
+/* Adjusting the width of the carousel */
+#mainCarousel {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Adjusting the height of the carousel */
+.carousel-item {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* for a 16:9 aspect ratio */
+}
+
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
