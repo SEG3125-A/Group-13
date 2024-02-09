@@ -1,0 +1,20 @@
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Add additional padding to the top of the container to ensure it's not covered by the fixed navbar */
+  .service-section {
+    color: white;
+    background-color: #5c5959; /* Adjust the color to match your theme */
+    padding: 100px 0;
+  }
+  
+  .underline {
+    width: 75px;
+    height: 2px;
+    background-color: #fff;
+    margin: auto;
+    margin-bottom: 2rem;
+  }

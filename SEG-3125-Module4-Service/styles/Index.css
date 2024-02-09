@@ -1,0 +1,119 @@
+/* Adjusting the width of the carousel */
+#mainCarousel {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Adjusting the height of the carousel */
+.carousel-item {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* for a 16:9 aspect ratio */
+}
+.carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services{
+  color: white;
+  background-color: #5c5959; /* Adjust the color to match your theme */
+  padding: 20px 0;
+}
+
+.underline {
+  width: 75px;
+  height: 2px;
+  background-color: #fff;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.img-square-wrapper {
+  position: relative;
+  width: 100%; /* Adjust the width as necessary */
+  /* Use padding-top to create a square aspect ratio */
+  padding-top: 100%; 
+  background-color: #f8f9fa; /* A light background color in case the image is not square */
+  overflow: hidden;
+}
+
+.card-img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Adjustments for .card-title to ensure it's visible */
+.card-title {
+  position: absolute;
+  bottom: 15%; /* Raise the title so it's visible on the image */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Assuming you want white text for visibility */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the text */
+  padding: 0.5em 1em;
+  width: auto;
+  z-index: 10; /* Ensure the title is above the image */
+}
+
+/* Adjustments for .btn-primary to ensure it's visible and well-positioned */
+.btn-primary {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; /* Ensure the button is above the image */
+  color: rgb(252, 164, 2);
+}
+
+.btn-primary:hover {
+  background-color: #656a70; /* Slightly darker shade of blue on hover */
+  color: white; /* Keep text color white on hover */
+}
+/* Ensure that the card does not exceed its part of the grid and stays square */
+.card.h-100 {
+  height: auto; /* Reset any previously set height */
+  margin: auto;
+}
+
+/* Update the .card class to maintain the square aspect ratio */
+.card {
+  overflow: hidden; /* Hide overflow */
+  /* Remove text-align to allow default alignment */
+}
+
+.team{
+  color: white;
+  background-color: #5c5959; /* Adjust the color to match your theme */
+  padding: 20px 0;
+}
+
+.team-img-square-wrapper {
+  width: 50%; /* Full width of the card */
+  padding-top: 20%; /* Smaller square, adjust the percentage as needed */
+  position: relative;
+}
+
+.team-img-square-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+/* If you want to adjust the overall size of the team cards */
+.team-card {
+  max-width: 65%; /* Adjust the width to be smaller */
+  margin: auto; /* Center the card in the column */
+}
