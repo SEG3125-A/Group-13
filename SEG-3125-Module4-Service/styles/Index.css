@@ -1,6 +1,7 @@
+
 /* Adjusting the width of the carousel */
 #mainCarousel {
-  max-width: 1500px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -10,6 +11,7 @@
   position: relative;
   width: 100%;
   padding-top: 56.25%; /* for a 16:9 aspect ratio */
+  transition: transform 2s ease;
 }
 .carousel-item img {
   position: absolute;
@@ -18,6 +20,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 2s ease;
 }
 
 .services{
@@ -55,7 +58,7 @@
 /* Adjustments for .card-title to ensure it's visible */
 .card-title {
   position: absolute;
-  bottom: 15%; /* Raise the title so it's visible on the image */
+  bottom: 10%; /* Raise the title so it's visible on the image */
   left: 50%;
   transform: translate(-50%, -50%);
   color: white; /* Assuming you want white text for visibility */
@@ -116,4 +119,23 @@
 .team-card {
   max-width: 65%; /* Adjust the width to be smaller */
   margin: auto; /* Center the card in the column */
+}
+
+.location{
+  color: white;
+  background-color: #5c5959; /* Adjust the color to match your theme */
+  padding: 20px 0;
+}
+
+.map-container{
+  overflow:hidden;
+  position:relative;
+  height:0;
+}
+.map-container iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
 }

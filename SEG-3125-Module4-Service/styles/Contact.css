@@ -1,7 +1,7 @@
 .contact-section {
     color: white;
     background-color: #5c5959; /* Adjust the color to match your theme */
-    padding: 100px 0;
+    padding: 150px 0;
 }
 
 .contact-form {
@@ -27,8 +27,9 @@
 
 /* Styles for the heading and underline */
 .contact-heading h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 5px;
     text-align: center;
+    
 }
 
 .underline {
@@ -38,3 +39,22 @@
     margin: auto;
     margin-bottom: 2rem;
 }
+
+.location{
+    color: white;
+    background-color: #5c5959; /* Adjust the color to match your theme */
+    padding: 20px 0;
+  }
+  
+  .map-container{
+    overflow:hidden;
+    position:relative;
+    height:0;
+  }
+  .map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
