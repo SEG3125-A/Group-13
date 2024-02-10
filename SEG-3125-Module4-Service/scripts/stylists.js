@@ -1,22 +1,22 @@
 var serviceList = {
-    haircut: ["MasStyle1", "MasStyle2", "SenStyle", "IntStyle"],
-    colouring: ["MasStyle1", "MasStyle2"],
-    highlighting: ["MasStyle1", "MasStyle2", "SenStyle"],
-    styling: ["MasStyle1", "MasStyle2", "SenStyle", "IntStyle"]
+    haircut: ["Elisa Leonard", "Ken Ray", "Ramona Rodriguez", "Tamara Phillips"],
+    colouring: ["Elisa Leonard", "Ken Ray"],
+    highlighting: ["Elisa Leonard", "Ken Ray", "Ramona Rodriguez"],
+    styling: ["Elisa Leonard", "Ken Ray", "Ramona Rodriguez", "Tamara Phillips"]
 }
 
 var weekTimeSlots = {
-    "MasStyle1": ["9 AM", "10 AM", "11 AM", "1 PM", "2 PM"],
-    "MasStyle2": ["2 PM", "3 PM", "4 PM", "5 PM", "6 PM"],
-    "SenStyle": ["12 PM", "1 PM", "2 PM", "3 PM"],
-    "IntStyle": ["9 AM", "10 AM", "11 AM", "12 PM"]
+    "Elisa Leonard": ["9 AM", "10 AM", "11 AM", "1 PM", "2 PM"],
+    "Ken Ray": ["2 PM", "3 PM", "4 PM", "5 PM", "6 PM"],
+    "Ramona Rodriguez": ["12 PM", "1 PM", "2 PM", "3 PM"],
+    "Tamara Phillips": ["9 AM", "10 AM", "11 AM", "12 PM"]
 }
 
 var satTimeSlots = {
-    "MasStyle1": ["12 PM", "1 PM", "2 PM", "3 PM"],
-    "MasStyle2": ["10 AM", "11 AM", "12 PM", "1 PM"],
-    "SenStyle": ["8 AM", "9 AM", "10 AM", "11 AM"],
-    "IntStyle": ["8 AM", "9 AM", "10 AM", "11 AM"]
+    "Elisa Leonard": ["12 PM", "1 PM", "2 PM", "3 PM"],
+    "Ken Ray": ["10 AM", "11 AM", "12 PM", "1 PM"],
+    "Ramona Rodriguez": ["8 AM", "9 AM", "10 AM", "11 AM"],
+    "Tamara Phillips": ["8 AM", "9 AM", "10 AM", "11 AM"]
 }
 
 el_service = document.getElementById("userInputService"); //parent select element
