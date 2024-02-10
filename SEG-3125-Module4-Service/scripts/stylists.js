@@ -1,34 +1,3 @@
-var stylist = [
-    {
-        name: "MasStyle1",
-        position: "Master Stylist",
-        weekSlots: [9, 10, 11, 13, 14],
-        satSlots: [12, 13, 14, 15],
-        services: ["haircut", "colouring", "highlighting", "styling"]
-    },
-    {
-        name: "SenStyle",
-        position: "Senior Stylist",
-        weekSlots: [12, 13, 14, 15],
-        satSlots: [8, 9, 10, 11],
-        services: ["haircut", "highlighting", "styling"]
-    },
-    {
-        name: "IntStyle",
-        position: "Intermediate Stylist",
-        weekSlots: [9, 10, 11, 12],
-        satSlots: [8, 9, 10, 11],
-        services: ["haircut", "styling"]
-    },
-    {
-        name: "MasStyle2",
-        position: "Master Stylist",
-        weekSlots: [14, 15, 16, 17, 18],
-        satSlots: [10, 11, 12, 13],
-        services: ["haircut", "colouring", "highlighting", "styling"]
-    }
-]
-
 var serviceList = {
     haircut: ["MasStyle1", "MasStyle2", "SenStyle", "IntStyle"],
     colouring: ["MasStyle1", "MasStyle2"],
