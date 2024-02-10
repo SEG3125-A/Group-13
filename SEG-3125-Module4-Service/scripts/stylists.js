@@ -22,12 +22,13 @@ var satTimeSlots = {
 el_service = document.getElementById("userInputService"); //parent select element
 el_stylist = document.getElementById("userInputHairstylist"); //child select element 1
 el_timeslot = document.getElementById("userInputAppointmentTime"); //child select element 2
-// el_date = document.getElementById("userInputAppointmentDate")
+el_date = document.getElementById("userInputAppointmentDate")
 
 // Restricting stylists in select form based on service selected
 el_service.addEventListener('change', function populate_child_stylist(e) {
+    el_stylist.disabled = false;
     el_stylist.innerHTML = '';
-    el_stylist.innerHTML += '<option selected disabled>Choose hairstylist</option>';
+    el_stylist.innerHTML += '<option value="" selected disabled>Choose a hairstylist</option>';
 
     serviceType = e.target.value;
     if (serviceType in serviceList) {
@@ -35,15 +36,29 @@ el_service.addEventListener('change', function populate_child_stylist(e) {
             el_stylist.innerHTML += '<option value="' + serviceList[serviceType][i] +'">' + serviceList[serviceType][i] + '</option>';
         }
     }
-})
+});
+
+// Re-enable appointment date field when hairstylist selected
+el_stylist.addEventListener('change', function enable_appointment_date(e) {
+    el_date.disabled = false;
+});
 
 //Restricting timeslots in select form based on stylist selected
-// el_stylist.addEventListener('change', function populate_child_stylist(e) {
-//     el_timeslot.innerHTML = '';
-//     el_timeslot.innerHTML += '<option selected disabled>Choose time</option>';
+el_date.addEventListener('change', function populate_child_stylist_times(e) {
+    el_timeslot.disabled = false;
+    el_timeslot.innerHTML = '';
+    el_timeslot.innerHTML += '<option value="" selected disabled>Choose a time</option>';
 
-//     stylistSelected = e.target.value;
-//     if (serviceType in serviceList) {
-//         el_timeslot.innerHTML += '<option>' + stylistSelected + '</option>';
-//     }
-// })
+    stylistSelected = el_stylist.value;
+
+    let selectedDate = new Date(el_date.value);
+    if (selectedDate.getUTCDay() == '6') {
+        for (i=0; i < satTimeSlots[stylistSelected].length; i++) {
+            el_timeslot.innerHTML += '<option>' + satTimeSlots[stylistSelected][i] + '</option>';
+        }
+    } else {
+        for (i=0; i < weekTimeSlots[stylistSelected].length; i++) {
+            el_timeslot.innerHTML += '<option>' + weekTimeSlots[stylistSelected][i] + '</option>';
+        }
+    }
+});

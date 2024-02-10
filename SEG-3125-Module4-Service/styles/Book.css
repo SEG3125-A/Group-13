@@ -44,6 +44,12 @@
     color: white;
   }
 
+  .booking-form .form-control:disabled, .booking-form .form-select:disabled {
+    background-color: lightcoral;
+    border: 1px solid #fff;
+    color: white;
+  }
+
   .booking-form .btn-primary {
     background-color: #222; /* Adjust the color to match your theme */
     border: 1px solid #fff;
