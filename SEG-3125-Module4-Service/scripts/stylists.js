@@ -52,10 +52,13 @@ el_date.addEventListener('change', function populate_child_stylist_times(e) {
     stylistSelected = el_stylist.value;
 
     let selectedDate = new Date(el_date.value);
-    if (selectedDate.getUTCDay() == '6') {
+    if (selectedDate.getUTCDay() == 6) {
         for (i=0; i < satTimeSlots[stylistSelected].length; i++) {
             el_timeslot.innerHTML += '<option>' + satTimeSlots[stylistSelected][i] + '</option>';
         }
+    } else if (selectedDate.getUTCDay() == 0){
+        el_timeslot.disabled = true;
+        el_timeslot.innerHTML = '<option value="" selected disabled>No appointments on this day</option>';
     } else {
         for (i=0; i < weekTimeSlots[stylistSelected].length; i++) {
             el_timeslot.innerHTML += '<option>' + weekTimeSlots[stylistSelected][i] + '</option>';
