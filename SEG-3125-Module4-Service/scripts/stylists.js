@@ -38,12 +38,12 @@ el_service.addEventListener('change', function populate_child_stylist(e) {
 })
 
 //Restricting timeslots in select form based on stylist selected
-el_stylist.addEventListener('change', function populate_child_stylist(e) {
-    el_timeslot.innerHTML = '';
-    el_timeslot.innerHTML += '<option selected disabled>Choose time</option>';
+// el_stylist.addEventListener('change', function populate_child_stylist(e) {
+//     el_timeslot.innerHTML = '';
+//     el_timeslot.innerHTML += '<option selected disabled>Choose time</option>';
 
-    stylistSelected = e.target.value;
-    if (serviceType in serviceList) {
-        el_timeslot.innerHTML += '<option>' + stylistSelected + '</option>';
-    }
-})
+//     stylistSelected = e.target.value;
+//     if (serviceType in serviceList) {
+//         el_timeslot.innerHTML += '<option>' + stylistSelected + '</option>';
+//     }
+// })
