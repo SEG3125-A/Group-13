@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles/Book.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand text-light" href="index.html">Style Salon</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" href="index.html">Home <span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light"  href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="book.html">Book Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+  
+  <!-- Booking Content -->
+  <section class="booking-section">
+    <div class="container">
+      <div class="text-center booking-heading">
+        <h2>BOOK AN APPOINTMENT</h2>
+        <div class="underline"></div>
+      </div>
+      <form class="booking-form" onsubmit="alert('Your appointment has been booked.')">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="userInputFirstName" placeholder="John" required>
+          <label for="userInputFirstName">First Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="userInputLastName" placeholder="Doe" required>
+          <label for="userInputLastName">Last Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="userInputEmail" aria-describedby="emailHelp" placeholder="johndoe@email.com" required>
+          <label for="userInputEmail">Email address</label>
+          <small id="emailHelp" class="form-text text-muted">Your email will be used to notify you about your appointment.</small>
+        </div>
+        <hr>
+        <div class="mb-3">
+          <label for="userInputService">Service</label>
+          <select id="userInputService" class="form-select" aria-label="Requested Service" required>
+            <option value="" selected disabled>Choose service</option>
+            <option value="haircut">Hair Cut: $55 - $75</option>
+            <option value="colouring">All Over Colouring: $110 - $120</option>
+            <option value="highlighting">Foil Highlighting: $135 - $175</option>
+            <option value="styling">Hair Styling: $55 - $65</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="userInputHairstylist" aria-describedby="hairstylistHelp">Hairstylist</label>
+          <select id="userInputHairstylist" class="form-select" aria-label="Hairstylist Name" disabled required>
+            <option value="" selected disabled>Choose a service above</option>
+          </select>
+          <small id="hairstylistHelp" class="form-text text-muted">Based on your selected service, these are the available hairstylists.</small>
+        </div>
+        <hr>
+        <div class="mb-3">
+          <label for="userInputAppointmentDate">Appointment Date</label>
+          <input id="userInputAppointmentDate" class="form-control" type="date" aria-describedby="dateHelp" placeholder="" disabled required>
+          <small id="dateHelp" class="form-text text-muted">Use the calendar to select the date, or enter a date manually.</small>
+        </div>
+        <div class="mb-3">
+          <label for="userInputAppointmentTime" aria-describedby="appointmentTimeHelp">Appointment Time</label>
+          <select id="userInputAppointmentTime" class="form-select" aria-label="Appointment Time" disabled required>
+            <option value="" selected disabled>Choose an appointment date above</option>
+          </select>
+          <small id="appointmentTimeHelp" class="form-text text-muted">Based on your selected hairstylist, these are their available appointment times.</small>
+        </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-primary">BOOK APPOINTMENT</button>
+        </div>
+      </form>
+    </div>
+  </section> 
+
+<!-- Add your footer here -->
+<footer class="bg-dark text-light text-center text-lg-start">
+    <div class="container p-4">
+        <div class="row">
+            <!-- Contact Us Section -->
+            <div class="col-md-4">
+                <h5 class="text-uppercase">Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="bi bi-geo-alt-fill"></i> 75 Laurier Avenue East, Ottawa, ON K1N 6N5
+                    </li>
+                    <li>
+                        <i class="bi bi-telephone-fill"></i> 123-456-7890
+                    </li>
+                    <li>
+                        <i class="bi bi-envelope-fill"></i> uottawa.ca
+                    </li>
+                </ul>
+            </div>
+            <!-- Hours of Operation Section -->
+            <div class="col-md-4">
+                <h5>HOURS</h5>
+                <p>Monday to Friday<br>9 AM – 6 PM</p>
+                <p>Saturday<br>8 AM – 3 PM</p>
+            </div>
+            <!-- Reviews Section -->
+            <div class="col-md-4">
+                <h5>CHECK OUR REVIEWS</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="bi bi-twitter"></i> X
+                    </li>
+                    <li>
+                        <i class="bi bi-facebook"></i> Facebook
+                    </li>
+                    <li>
+                        <i class="bi bi-google"></i> Google Reviews
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © Website Designed by Group 13
+    </div>
+</footer>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="scripts/stylists.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</body>
+</html>
