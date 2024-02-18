@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles/Index.css">
 </head>
 <body>
@@ -20,16 +21,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item active">
-                        <a class="nav-link text-light" href="index.html">Home <span class="sr-only"></span></a>
+                        <a class="nav-link text-light home-button" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light"  href="services.html">Services</a>
+                        <a class="nav-link text-light"  href=".services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="contact.html">Contact</a>
+                        <a class="nav-link text-light" href=".contact-section">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="book.html">Book Now</a>
+                        <a class="nav-link text-light" href=".booking-section">Book Now</a>
                     </li>
                 </ul>
             </div>
@@ -68,55 +69,67 @@
         </button>
       </div>
 
-    <!-- Add your services section here -->
-    <section class="services" class="container mt-5">
-        <div class="text-center contact-heading">
-            <h2>OUR SERVICES</h2>
-            <div class="underline"></div>
+    <!-- Services Content -->
+  <section class="services">
+    <div class="text-center contact-heading">
+    <h2>OUR SERVICES</h2>
+    <div class="underline"></div>
+    </div>
+    <div class="row">
+        <div class="col-12 mb-4" style="display: flex; align-items: center; background-color: transparent;">
+            <div style="flex: 0 0 auto; width: 220px; height: 220px; overflow: hidden;">
+              <img src="images/hair cut.jpg" alt="Haircut" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="flex: 1; padding-left: 20px;"> <!-- Added padding for some space between the image and text -->
+              <h1 style="margin-top: 0;">Hair Cut</h1> <!-- Removed card-title class -->
+              <p>A hairstyle’s aesthetic considerations may be determined by many factors, such as the subject’s physical attributes and desired self-image or the stylist’s artistic instincts.
+                Hair cutting or hair trimming is intended to create or maintain a specific shape and form. 
+                <br>Its extent may range from merely trimming the uneven ends of the hair to a uniform length.
+                A hairstyle is achieved by arranging hair in a certain way, occasionally using combs, a blow-dryer, gel, or other products.</p> <!-- Removed card-text class -->
+              <p style="font-weight: bold;">$55 - $75</p> <!-- Added inline styling for price -->
+              <a href="book.html" class="btn btn-primary">Book Now</a>
+            </div>
+          </div>
+      <div class="col-12 mb-4" style="display: flex; align-items: center; background-color: transparent;">
+        <div style="flex: 0 0 auto; width: 220px; height: 220px; overflow: hidden;">
+          <img src="images/Colouring.jpg" alt="Haircut" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-        <div class="row">
-            <!-- Service 1 -->
-            <div class="col-md-3 mb-4">
-                <div class="card ">
-                    <div class="img-square-wrapper">
-                    <img src="images/Foil Highlights.jpg" class="card-img-top img-fluid" alt="Service 1">
-                    </div>
-                        <h5 class="card-title text-light">FOIL HIGHLIGHTING</h5>
-                        <a href="services.html" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-            <!-- Service 2 -->
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <div class="img-square-wrapper">
-                    <img src="images/hair cut.jpg" class="card-img-top img-fluid" alt="Service 2">
-                    </div>
-                        <h5 class="card-title text-light">HAIR CUT</h5>
-                        <a href="services.html" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-            <!-- Service 3 -->
-            <div class="col-md-3 mb-4">
-                <div class="card">
-                    <div class="img-square-wrapper">
-                    <img src="images/Colouring.jpg" class="card-img-top img-fluid" alt="Service 3">
-                </div>
-                        <h5 class="card-title text-light">COLOURING</h5>
-                        <a href="services.html" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-             <!-- Service 4 -->
-             <div class="col-md-3 mb-4">
-                <div class="card">
-                    <div class="img-square-wrapper">
-                    <img src="images/Hair style.avif" class="card-img-top img-fluid" alt="Service 1">
-                </div>
-                        <h5 class="card-title text-light">HAIR STYLING</h5>
-                        <a href="services.html" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
+        <div style="flex: 1; padding-left: 20px;"> <!-- Added padding for some space between the image and text -->
+          <h1 style="margin-top: 0;">All Over Colouring</h1> <!-- Removed card-title class -->
+          <p>Hair colouring is the practice of changing the colour of hair. The main reasons for this practice are cosmetic (e.g., to cover gray hair, to change to a colour regarded as more fashionable or desirable, or to restore the original hair colour after it has been 
+            <br>
+            discoloured by hairdressing processes Hair tinting, is an ancient art. Today, hair colouring is immensely popular, with over 75 percent of women colouring their hair.</p> <!-- Removed card-text class -->
+          <p style="font-weight: bold;">$110 - $120</p> <!-- Added inline styling for price -->
+          <a href="book.html" class="btn btn-primary">Book Now</a>
         </div>
-    </section>
+      </div>
+      <div class="col-12 mb-4" style="display: flex; align-items: center; background-color: transparent;">
+        <div style="flex: 0 0 auto; width: 220px; height: 220px; overflow: hidden;">
+          <img src="images/Foil Highlights.jpg" alt="Haircut" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div style="flex: 1; padding-left: 20px;"> <!-- Added padding for some space between the image and text -->
+          <h1 style="margin-top: 0;">Foil Highlighting</h1> <!-- Removed card-title class -->
+          <p>Foil highlighting is the process of using foil to separate strands of hair which will be lightened from strands of hair which will remain its natural color. The process is done by applying lightener to the hair that has been woven and separated using an applicator brush. 
+            <br>
+            The foil is then folded to protect the hair and surrounding area during the “processing” time.
+            This is the amount of time required to achieve the desired results. In highlighting hair, hydrogen peroxide mixed with pigment is used to change the color of the strand.</p> <!-- Removed card-text class -->
+          <p style="font-weight: bold;">$135 - $175</p> <!-- Added inline styling for price -->
+          <a href="book.html" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+      <div class="col-12 mb-4" style="display: flex; align-items: center; background-color: transparent;">
+        <div style="flex: 0 0 auto; width: 220px; height: 220px; overflow: hidden;">
+          <img src="images/Hair style.avif" alt="Haircut" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div style="flex: 1; padding-left: 20px;"> <!-- Added padding for some space between the image and text -->
+          <h1 style="margin-top: 0;">Hair Styling</h1> <!-- Removed card-title class -->
+          <p>An updo is a hair style that involves arranging the hair instead of allowing it to fall freely. It can be as simple as a ponytail, but is more commonly associated with more elaborate styles intended for special occasions such as a prom or wedding.</p> <!-- Removed card-text class -->
+          <p style="font-weight: bold;">$55 - $65</p> <!-- Added inline styling for price -->
+          <a href="book.html" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>  
     
     <!-- Team Section -->
 <section class="team" class="container mt-5">
@@ -177,6 +190,95 @@
 </section>
 
     <!-- Add your location/contact information here -->
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="container">
+        <div class="text-center contact-heading">
+            <h2>CONTACT US</h2>
+            <div class="underline"></div>
+            <p>We look forward to seeing you. Please, use the contact form below, our email address or simply call us to make an appointment.</p>
+        </div>
+        
+        <!-- Contact Form -->
+        <form class="contact-form" onsubmit="alert('Your message has been sent.')">
+            <div class="mb-3">
+                <label for="name" class="form-label">Your Name (required)</label>
+                <input type="text" class="form-control" id="name" >
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Your Email (required)</label>
+                <input type="email" class="form-control" id="email" >
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Your Message</label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">SEND</button>
+        </form>
+    </div>
+</section>
+
+<!-- Booking Content -->
+<section class="booking-section">
+    <div class="container">
+      <div class="text-center booking-heading">
+        <h2>BOOK AN APPOINTMENT</h2>
+        <div class="underline"></div>
+      </div>
+      <form class="booking-form" onsubmit="alert('Your appointment has been booked.')">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="userInputFirstName" placeholder="John" required>
+          <label for="userInputFirstName">First Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="userInputLastName" placeholder="Doe" required>
+          <label for="userInputLastName">Last Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="userInputEmail" aria-describedby="emailHelp" placeholder="johndoe@email.com" required>
+          <label for="userInputEmail">Email address</label>
+          <small id="emailHelp" class="form-text text-muted">Your email will be used to notify you about your appointment.</small>
+        </div>
+        <hr>
+        <div class="mb-3">
+          <label for="userInputService">Service</label>
+          <select id="userInputService" class="form-select" aria-label="Requested Service" required>
+            <option value="" selected disabled>Choose service</option>
+            <option value="haircut">Hair Cut: $55 - $75</option>
+            <option value="colouring">All Over Colouring: $110 - $120</option>
+            <option value="highlighting">Foil Highlighting: $135 - $175</option>
+            <option value="styling">Hair Styling: $55 - $65</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="userInputHairstylist" aria-describedby="hairstylistHelp">Hairstylist</label>
+          <select id="userInputHairstylist" class="form-select" aria-label="Hairstylist Name" disabled required>
+            <option value="" selected disabled>Choose a service above</option>
+          </select>
+          <small id="hairstylistHelp" class="form-text text-muted">Based on your selected service, these are the available hairstylists.</small>
+        </div>
+        <hr>
+        <div class="mb-3">
+          <label for="userInputAppointmentDate">Appointment Date</label>
+          <input id="userInputAppointmentDate" class="form-control" type="date" aria-describedby="dateHelp" placeholder="" disabled required>
+          <small id="dateHelp" class="form-text text-muted">Use the calendar to select the date, or enter a date manually.</small>
+        </div>
+        <div class="mb-3">
+          <label for="userInputAppointmentTime" aria-describedby="appointmentTimeHelp">Appointment Time</label>
+          <select id="userInputAppointmentTime" class="form-select" aria-label="Appointment Time" disabled required>
+            <option value="" selected disabled>Choose an appointment date above</option>
+          </select>
+          <small id="appointmentTimeHelp" class="form-text text-muted">Based on your selected hairstylist, these are their available appointment times.</small>
+        </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-primary">BOOK APPOINTMENT</button>
+        </div>
+      </form>
+    </div>
+  </section> 
+
+
 <section class="location" class="container mt-5">
     <div class="text-center contact-heading">
         <h2>OUR LOCATION</h2>
@@ -244,6 +346,25 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
-
+    
+    <script>
+        $(document).ready(function(){
+            $('a.nav-link').click(function(e){
+                var href = $(this).attr('href');
+                if(href === "#") {
+                    e.preventDefault(); // Prevent default anchor behavior for Home button
+                    $('html, body').animate({
+                        scrollTop: 0 // Scroll to the top of the document for Home button
+                    }, 800); // Duration in milliseconds for the scroll animation
+                } else if(href.startsWith('.')) {
+                    e.preventDefault(); // Prevent default anchor behavior for class-based navigation
+                    var scrollToElem = $(href).first(); // Select the first element with that class
+                    $('html, body').animate({
+                        scrollTop: $(scrollToElem).offset().top // Scroll to the class-based element
+                    }, 800); // Duration in milliseconds
+                }
+            });
+        });
+        </script>
 </body>
 </html>

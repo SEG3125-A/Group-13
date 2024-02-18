@@ -39,7 +39,7 @@
   object-fit: cover;
   transition: transform 2s ease;
 }
-
+/* SERVICES */
 .services{
   color: white;
   background-color: #5c5959; /* Adjust the color to match your theme */
@@ -52,6 +52,17 @@
   background-color: #fff;
   margin: auto;
   margin-bottom: 2rem;
+}
+
+section {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 20px;
+  margin-bottom: 5px;
+}
+
+/* Exclude the last section from having a bottom border */
+section:not(:last-of-type) {
+  border-bottom: 2px solid #ccc;
 }
 
 .img-square-wrapper {
@@ -85,16 +96,6 @@
   z-index: 10; /* Ensure the title is above the image */
 }
 
-/* Adjustments for .btn-primary to ensure it's visible and well-positioned */
-.btn-primary {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10; /* Ensure the button is above the image */
-  color: rgb(252, 164, 2);
-}
-
 .btn-primary:hover {
   background-color: #656a70; /* Slightly darker shade of blue on hover */
   color: white; /* Keep text color white on hover */
@@ -111,6 +112,26 @@
   /* Remove text-align to allow default alignment */
 }
 
+.map-container{
+    overflow:hidden;
+    position:relative;
+    height:0;
+  }
+  .map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+
+.price {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* TEAM */
 .team{
   color: white;
   background-color: #5c5959; /* Adjust the color to match your theme */
@@ -137,7 +158,106 @@
   max-width: 65%; /* Adjust the width to be smaller */
   margin: auto; /* Center the card in the column */
 }
+/* CONTACT */
+.contact-section {
+  color: white;
+  background-color: #5c5959; /* Adjust the color to match your theme */
+  padding-top: 100px; /* Adjust the top padding */
+  padding-bottom: 20px; /* Adjust the bottom padding */
+}
 
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form .form-control {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: white;
+  margin-bottom: 0rem; /* Added margin-bottom to each input for spacing */
+}
+
+.contact-form .btn-primary {
+  background-color: #222; /* Adjust the color to match your theme */
+  border: 1px solid #fff;
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #444; /* Adjust the color for hover state */
+}
+
+/* Styles for the heading and underline */
+.contact-heading h2 {
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+/* BOOKING */
+ /* Add additional padding to the top of the container to ensure it's not covered by the fixed navbar */
+ .booking-section {
+  background-color: #5c5959; /* Adjust the color to match your theme */
+  padding: 100px 10px;
+}
+
+.booking-heading {
+  color: white; /* Make sure our heading remains visible with the background color */
+}
+
+.booking-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.underline {
+  width: 75px;
+  height: 2px;
+  background-color: #fff;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.booking-form .form-control, .booking-form .form-select {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: white;
+}
+
+.booking-form .form-control:disabled, .booking-form .form-select:disabled {
+  background-color: lightcoral;
+  border: 1px solid #fff;
+  color: white;
+}
+
+.booking-form .btn-primary {
+  background-color: #222; /* Adjust the color to match your theme */
+  border: 1px solid #fff;
+}
+
+.form-text {
+  color: black !important;
+  background-color: lightgray;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+form label {
+  color: white;
+}
+
+hr {
+  background-color: white;
+  padding: 1px 0;
+  border-radius: 5px;
+}
+
+select option {
+  color:#5c5959;
+}
+
+/* LOCATION */
 .location{
   color: white;
   background-color: #5c5959; /* Adjust the color to match your theme */
