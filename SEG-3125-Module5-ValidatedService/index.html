@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- jQuery Cleave Input Formatting Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+
+    <!-- Custom Scripts and Stylesheets -->
     <link rel="stylesheet" href="styles/Index.css">
+    <script src="scripts/stylists.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
@@ -174,8 +188,8 @@
                 </div>
             </div>
         </div>
-         <!-- Team Member 4 -->
-         <div class="col-lg-2">
+        <!-- Team Member 4 -->
+        <div class="col-lg-2">
             <div class="card team-card">
                 <div class="img-square-wrapper">
                 <img src="images/Team member 4.jpg" class="card-img-top" alt="Team Member 3">
@@ -226,21 +240,27 @@
         <h2>BOOK AN APPOINTMENT</h2>
         <div class="underline"></div>
       </div>
+      <div class="text-center booking-heading">
+        <h5>PERSONAL INFORMATION</h5>
+      </div>
       <form class="booking-form" onsubmit="alert('Your appointment has been booked.')">
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="userInputFirstName" placeholder="John" required>
+        <div class="mb-3">
           <label for="userInputFirstName">First Name</label>
+          <input type="text" autocomplete="given-name" name="fname" class="form-control" id="userInputFirstName" placeholder="John" required>
         </div>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="userInputLastName" placeholder="Doe" required>
+        <div class="mb-3">
           <label for="userInputLastName">Last Name</label>
+          <input type="text" autocomplete="family-name" name="lname" class="form-control" id="userInputLastName" placeholder="Doe" required>
         </div>
-        <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="userInputEmail" aria-describedby="emailHelp" placeholder="johndoe@email.com" required>
+        <div class=" mb-3">
           <label for="userInputEmail">Email address</label>
+          <input type="email" autocomplete="email" name="email" class="form-control" id="userInputEmail" aria-describedby="emailHelp" placeholder="johndoe@email.com" required>
           <small id="emailHelp" class="form-text text-muted">Your email will be used to notify you about your appointment.</small>
         </div>
         <hr>
+        <div class="text-center booking-heading">
+          <h5>APPOINTMENT INFORMATION</h5>
+        </div>
         <div class="mb-3">
           <label for="userInputService">Service</label>
           <select id="userInputService" class="form-select" aria-label="Requested Service" required>
@@ -271,6 +291,29 @@
           </select>
           <small id="appointmentTimeHelp" class="form-text text-muted">Based on your selected hairstylist, these are their available appointment times.</small>
         </div>
+        <hr>
+        <div class="text-center booking-heading">
+          <h5>PAYMENT INFORMATION</h5>
+          <p>You card will only be charged for late cancellation fees</p>
+        </div>
+        <div class="mb-3">
+          <label for="userInputCardName">Name on Card</label>
+          <input type="text" autocomplete="cc-name" name="ccname" class="form-control" id="userInputCardName" placeholder="John Doe" required>
+        </div>
+        <div class="mb-3">
+          <label for="userInputCardNumber">Card Number</label>
+          <input type="text" inputmode="numeric" autocomplete="cc-number" name="cardnumber" class="form-control" id="userInputCardNumber" placeholder="1234 1234 1234 1234" required>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label for="userInputCardExpiry">Expiration Date (MM/YY)</label>
+            <input type="text" inputmode="numeric" autocomplete="cc-exp" name="exp-date" class="form-control" id="userInputCardExpiry" placeholder="01/23" required>
+          </div>
+          <div class="col">
+            <label for="userInputCardCode">Security Code (CVC)</label>
+            <input type="text" inputmode="numeric" autocomplete="cc-csc" name="cvc" class="form-control" id="userInputCardCode" placeholder="123" required>
+          </div>
+        </div>
         <div class="mb-3">
           <button type="submit" class="btn btn-primary">BOOK APPOINTMENT</button>
         </div>
@@ -287,7 +330,6 @@
     <!--Google map-->
 <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.317033759427!2d-75.6857078232504!3d45.42311013617856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce050a6db98d73%3A0x188a59c3622fdbae!2sUniversity%20of%20Ottawa!5e0!3m2!1sen!2sca!4v1707503097857!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      style="border:0" allowfullscreen></iframe>
 </div>
 </section>
     <!--Google Maps-->
@@ -340,14 +382,12 @@
         </div>
     </footer>
 
-    <script src="scripts/stylists.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
-    
     <script>
+        /*
+            jQuery Code
+        */
+
+        // Navigation Bar
         $(document).ready(function(){
             $('a.nav-link').click(function(e){
                 var href = $(this).attr('href');
@@ -365,6 +405,22 @@
                 }
             });
         });
-        </script>
+
+        // Form Input Formatting (Cleave)
+        var cleaveCardNumber = new Cleave('#userInputCardNumber', {
+          numericOnly: true,
+          blocks: [4, 4, 4, 4],
+        });
+
+        var cleaveCardExpiry = new Cleave('#userInputCardExpiry', {
+          date: true,
+          datePattern: ['m', 'y']
+        });
+
+        var cleaveCardCode = new Cleave('#userInputCardCode', {
+          numericOnly: true,
+          blocks: [3]
+        });
+    </script>
 </body>
 </html>
