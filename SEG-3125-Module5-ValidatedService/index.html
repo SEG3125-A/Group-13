@@ -226,21 +226,27 @@
         <h2>BOOK AN APPOINTMENT</h2>
         <div class="underline"></div>
       </div>
+      <div class="text-center booking-heading">
+        <h5>PERSONAL INFORMATION</h5>
+      </div>
       <form class="booking-form" onsubmit="alert('Your appointment has been booked.')">
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="userInputFirstName" placeholder="John" required>
+        <div class="mb-3">
           <label for="userInputFirstName">First Name</label>
+          <input type="text" autocomplete="given-name" name="fname" class="form-control" id="userInputFirstName" placeholder="John" required>
         </div>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="userInputLastName" placeholder="Doe" required>
+        <div class="mb-3">
           <label for="userInputLastName">Last Name</label>
+          <input type="text" autocomplete="family-name" name="lname" class="form-control" id="userInputLastName" placeholder="Doe" required>
         </div>
-        <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="userInputEmail" aria-describedby="emailHelp" placeholder="johndoe@email.com" required>
+        <div class=" mb-3">
           <label for="userInputEmail">Email address</label>
+          <input type="email" autocomplete="email" name="email" class="form-control" id="userInputEmail" aria-describedby="emailHelp" placeholder="johndoe@email.com" required>
           <small id="emailHelp" class="form-text text-muted">Your email will be used to notify you about your appointment.</small>
         </div>
         <hr>
+        <div class="text-center booking-heading">
+          <h5>APPOINTMENT INFORMATION</h5>
+        </div>
         <div class="mb-3">
           <label for="userInputService">Service</label>
           <select id="userInputService" class="form-select" aria-label="Requested Service" required>
@@ -270,6 +276,29 @@
             <option value="" selected disabled>Choose an appointment date above</option>
           </select>
           <small id="appointmentTimeHelp" class="form-text text-muted">Based on your selected hairstylist, these are their available appointment times.</small>
+        </div>
+        <hr>
+        <div class="text-center booking-heading">
+          <h5>PAYMENT INFORMATION</h5>
+          <p>You card will only be charged for late cancellation fees</p>
+        </div>
+        <div class="mb-3">
+          <label for="userInputCardName">Name on Card</label>
+          <input type="text" autocomplete="cc-name" name="ccname" class="form-control" id="userInputCardName" placeholder="John Doe" required>
+        </div>
+        <div class="mb-3">
+          <label for="userInputCardNumber">Card Number</label>
+          <input type="text" inputmode="numeric" autocomplete="cc-number" name="cardnumber" class="form-control" id="userInputCardNumber" placeholder="1234 1234 1234 1234" required>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label for="userInputCardExpiry">Expiration Date (MM/YY)</label>
+            <input type="text" autocomplete="cc-exp" name="exp-date" class="form-control" id="userInputCardExpiry" placeholder="01/23" required>
+          </div>
+          <div class="col">
+            <label for="userInputCardCode">Security Code (CVC)</label>
+            <input type="text" inputmode="numeric" autocomplete="cc-csc" name="cvc" class="form-control" id="userInputCardCode" placeholder="123" required>
+          </div>
         </div>
         <div class="mb-3">
           <button type="submit" class="btn btn-primary">BOOK APPOINTMENT</button>
