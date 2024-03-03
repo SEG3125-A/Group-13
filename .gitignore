@@ -131,6 +131,3 @@ dist
 
 # Mac OS DS_Store
 .DS_Store
-
-# Ignore lab 6 JSON files (for now)
-SEG-3125-Module6-SurveyAnalysis/data/*.json
