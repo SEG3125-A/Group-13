@@ -11,10 +11,15 @@ var app = express();
 app.set('view engine', 'ejs');
 
 // static file serving
-app.use(express.static('./public'));
+app.use('/public', express.static('./public'));
 
 // fire function from surveyController
 surveyController(app);
+
+// 404 page
+app.use((req, res) => {
+    res.status(404).render('404');
+})
 
 // listen to port
 app.listen(3000);

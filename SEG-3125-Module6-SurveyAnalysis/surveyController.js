@@ -42,24 +42,31 @@ module.exports = function(app){
     // when a user goes to localhost:3000/analysis
     // serve a template (ejs file) which will include the data from the data files
     app.get('/analysis', function(req, res){
-        var color = readData("color");
-        var fruit = readData("fruit");
-        var animal = readData("animal");
-        res.render('showResults', {results: [color, fruit, animal]});
-        console.log([color, fruit, animal]);
+        // var color = readData("color");
+        // var fruit = readData("fruit");
+        // var animal = readData("animal");
+        var q1answers = readData("q1");
+        var q2answers = readData("q2");
+        var q3answers = readData("q3");
+        var q4answers = readData("q4");
+        var q5answers = readData("q5");
+        var q6answers = readData("q6");
+        res.render('showResults', {results: [q1answers, q2answers, q3answers, q4answers, q5answers, q6answers]});
+        console.log([q1answers, q2answers, q3answers, q4answers, q5answers, q6answers]);
     });
 
     // when a user goes to localhost:3000/niceSurvey
     // serve a static html (the survey itself to fill in)
-    app.get('/niceSurvey', function(req, res){
+    app.get('/survey', function(req, res){
         console.log("loaded with GET")
-        res.sendFile(__dirname+'/views/survey.html');
+        // res.sendFile(__dirname+'/views/survey.html');
+        res.render('survey');
     });
 
     // when a user types SUBMIT in localhost:3000/niceSurvey 
     // the action.js code will POST, and what is sent in the POST
     // will be recuperated here, parsed and used to update the data files
-    app.post('/niceSurvey', urlencodedParser, function(req, res){
+    app.post('/survey', urlencodedParser, function(req, res){
         console.log(req.body);
         var json = req.body;
         for (var key in json){
