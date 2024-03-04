@@ -5,22 +5,40 @@
 
 <body>
     <h1>Survey analysis</h1>
-    <h2>Colors</h2>
+    <h2>Q1: Liked Aspects</h2>
     <ul>
     <% for (var i=0; i<results[0].length; i++){ %>
-        <li><%= results[0][i].color %> :  <%= results[0][i].count %></li>
+        <li><%= results[0][i].q1 %></li>
     <% } %>    
     </ul>
-    <h2>Fruits</h2>
+    <h2>Q2: Disliked Aspects</h2>
     <ul>
     <% for (var i=0; i<results[1].length; i++){ %>
-        <li><%= results[1][i].fruit %> :  <%= results[1][i].count %></li>
+        <li><%= results[1][i].q2 %></li>
     <% } %>    
     </ul>
-    <h2>Animals</h2>
+    <h2>Q3: Demographics</h2>
     <ul>
     <% for (var i=0; i<results[2].length; i++){ %>
-        <li><%= results[2][i].animal %> :  <%= results[2][i].count %></li>
+        <li><%= results[2][i].q3 %> :  <%= results[2][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Q4: Ease of Navigation</h2>
+    <ul>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].q4 %> :  <%= results[2][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Q5: Navigation Difficulty</h2>
+    <ul>
+    <% for (var i=0; i<results[4].length; i++){ %>
+        <li><%= results[4][i].q5 %> :  <%= results[4][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Q6: Other Comments</h2>
+    <ul>
+    <% for (var i=0; i<results[5].length; i++){ %>
+        <li><%= results[5][i].q6 %></li>
     <% } %>    
     </ul>
 </body>
