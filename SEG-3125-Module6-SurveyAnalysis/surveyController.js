@@ -57,7 +57,7 @@ module.exports = function(app){
 
     // when a user goes to localhost:3000/niceSurvey
     // serve a static html (the survey itself to fill in)
-    app.get('/niceSurvey', function(req, res){
+    app.get('/survey', function(req, res){
         console.log("loaded with GET")
         res.sendFile(__dirname+'/views/survey.html');
     });
@@ -65,7 +65,7 @@ module.exports = function(app){
     // when a user types SUBMIT in localhost:3000/niceSurvey 
     // the action.js code will POST, and what is sent in the POST
     // will be recuperated here, parsed and used to update the data files
-    app.post('/niceSurvey', urlencodedParser, function(req, res){
+    app.post('/survey', urlencodedParser, function(req, res){
         console.log(req.body);
         var json = req.body;
         for (var key in json){
