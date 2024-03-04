@@ -14,17 +14,17 @@ app.get('/survey', (req, res) => {
     res.render('survey');
 })
 
-app.get('/showResults', (req, res) => {
-    res.render('showResults');
+app.get('/analysis', (req, res) => {
+    res.render('analysis');
 })
+
+// static file serving
+app.use('/public', express.static('./public'));
 
 // 404 page
 app.use((req, res) => {
     res.status(404).render('404');
 })
-
-// static file serving
-app.use(express.static('./public'));
 
 // fire function from surveyController
 surveyController(app);

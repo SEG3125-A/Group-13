@@ -59,7 +59,8 @@ module.exports = function(app){
     // serve a static html (the survey itself to fill in)
     app.get('/survey', function(req, res){
         console.log("loaded with GET")
-        res.sendFile(__dirname+'/views/survey.html');
+        // res.sendFile(__dirname+'/views/survey.html');
+        res.render('survey');
     });
 
     // when a user types SUBMIT in localhost:3000/niceSurvey 
