@@ -1,35 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Results</title>
-    <link rel="stylesheet" href="../public/css/style.css">
+    <title>Survey Analysis</title>
 </head>
+
 <body>
-    <header>
-        <h1>Survey Results for Khan Academy UI</h1>
-    </header>
-    <main>
-        <% Object.keys(results).forEach(function(questionId) { %>
-            <section>
-                <h2>Question <%= questionId.replace('q', '') %>:</h2>
-                <% if (Array.isArray(results[questionId])) { %>
-                    <ul>
-                        <% results[questionId].forEach(function(response) { %>
-                            <li><%= response %></li>
-                        <% }) %>
-                    </ul>
-                <% } else { %>
-                    <% Object.keys(results[questionId]).forEach(function(response) { %>
-                        <p><%= response %>: <%= results[questionId][response] %></p>
-                    <% }) %>
-                <% } %>
-            </section>
-        <% }) %>
-    </main>
-    <footer>
-        <p>Website designed by Group 13</p>
-    </footer>
+    <h1>Survey analysis</h1>
+    <h2>Colors</h2>
+    <ul>
+    <% for (var i=0; i<results[0].length; i++){ %>
+        <li><%= results[0][i].color %> :  <%= results[0][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Fruits</h2>
+    <ul>
+    <% for (var i=0; i<results[1].length; i++){ %>
+        <li><%= results[1][i].fruit %> :  <%= results[1][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Animals</h2>
+    <ul>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].animal %> :  <%= results[2][i].count %></li>
+    <% } %>    
+    </ul>
 </body>
 </html>
