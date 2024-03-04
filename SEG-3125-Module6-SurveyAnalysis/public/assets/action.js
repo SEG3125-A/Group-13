@@ -3,12 +3,12 @@ $(document).ready(function(){
 
   $('form').on('submit', function(){
       
-      var item = $('form input');
-      console.log(item.serializeArray());
+      // var item = $('form input');
+      // console.log(item.serializeArray());
 
       $.ajax({
         type: 'POST',
-        url: '/survey',
+        url: '/niceSurvey',
         data: $(this).serializeArray(),
         success: function(data){
           // do something with the data via front-end framework
