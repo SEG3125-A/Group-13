@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  /*font-family: ;*/
+  color: #333;
+}
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.navbar a {
+  margin-left: 10px;
+  text-decoration: none;
+  padding: 6px;
+  color: black;
+}
+
+.navbar a:hover {
+  color: blue;
+}
+
+.content {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
