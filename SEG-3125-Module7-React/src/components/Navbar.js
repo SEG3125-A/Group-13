@@ -1,14 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = () => (
+const Navbar = () => {
+    return (
     <nav className="navbar">
         <h1 className="title">The Big Fork</h1>
         <u1 className="navbar-links">
-            <li className="links"><a href="#home">Home</a></li>
-            <li className="links"><a href="#about">About</a></li>
-            <li className="links"><a href="#menu">Menu</a></li>
-            <li className="links"><a href="#contact">Contact</a></li>
+            <li className="links"><Link to="/">Home</Link></li>
+            <li className="links"><Link to="/about">About</Link></li>
+            <li className="links"><Link to="/menu">Menu</Link></li>
+            <li className="links"><Link to="/contact">Contact</Link></li>
         </u1>
         <div className="navbar-login">
             <a href="login" className="login">Log In / Register</a>
@@ -17,7 +19,10 @@ const Navbar = () => (
         <div className="navbar-book">
             <a href="/" className="book">Book Table</a>
         </div>
+
+        
     </nav>
-);
+    );
+};
 
 export default Navbar;
