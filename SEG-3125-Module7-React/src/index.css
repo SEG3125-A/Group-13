@@ -20,6 +20,13 @@ a {
   padding: 20px;
 }
 
+/* --------------- Menu --------------- */
+
+.menu-category h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 .menu-item {
   display: flex;
   background-color: whitesmoke;
