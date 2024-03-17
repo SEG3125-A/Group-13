@@ -31,7 +31,8 @@
 }
 
 .navbar-login a:hover{
-    color:grey;
+    color:rgb(185, 183, 183);
+    border-bottom: 1px solid gold;
 }
 
 .navbar-login a{
@@ -40,7 +41,14 @@
     transition: 0.5s ease;
  }
  
- .navbar-book {
+.navbar-divider {
+    width: 1px;
+    height: 30px;
+    background-color: grey;
+    margin: 0 1rem; /* This adds horizontal space around the divider */
+  }
+
+.navbar-book {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -48,7 +56,8 @@
 }
 
 .navbar-book a:hover{
-    color:grey;
+    color:rgb(185, 183, 183);
+    border-bottom: 1px solid gold;
 }
 
 .navbar-book a{

@@ -13,6 +13,7 @@ const Navbar = () => (
         <div className="navbar-login">
             <a href="login" className="login">Log In / Register</a>
         </div>
+        <div className="navbar-divider"></div>
         <div className="navbar-book">
             <a href="/" className="book">Book Table</a>
         </div>
