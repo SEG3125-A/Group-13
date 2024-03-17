@@ -64,12 +64,15 @@
     margin: 0 1rem;
     text-decoration: none;
     transition: 0.5s ease;
+    padding: 10px;
+    background-color: darkred;
+    border-radius: 5px;
  }
 
 .navbar-links {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 
     list-style: none;
