@@ -37,12 +37,9 @@ a {
   margin: 10px;
 }
 
-.menu-item-pic {
-  text-align: center;
-}
-
 .menu-item-pic img {
   max-height: 100px;
+  vertical-align: middle;
 }
 
 .menu-item-desc {
