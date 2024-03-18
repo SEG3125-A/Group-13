@@ -1,3 +1,6 @@
+/* Red Hat Display font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
 * {
   font-family: "Red Hat Display", sans-serif;
   box-sizing: border-box;
@@ -9,4 +12,39 @@
 a {
   color: unset;
   text-decoration: none;
+}
+
+
+.content {
+  max-width: 1200px; /* Positions the content near the middle of the page */
+  margin: auto;
+  padding: 20px;
+}
+
+/* --------------- Menu --------------- */
+
+.menu-category h1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.menu-item {
+  display: flex;
+  background-color: whitesmoke;
+  margin-bottom: 10px;
+}
+
+.menu-item div {
+  margin: 10px;
+}
+
+.menu-item-pic img {
+  max-height: 150px;
+  vertical-align: middle;
+}
+
+.menu-item-desc {
+  width: 100%;
+  background-color: lightgray;
+  padding: 10px;
 }
