@@ -9,7 +9,7 @@ import Menu from './pages/Menu';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import Chat from './components/Chat';
-
+import ReservationPage from './pages/Reservation';
 
 function App() {
   return (
@@ -22,9 +22,10 @@ function App() {
             <Route path="/menu" element={<Menu />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/about" element={<About />}></Route>
+            <Route path="/reserve" element={<ReservationPage />} /> {}
           </Routes>
         </div>
-        <Chat /> {/* This will make Chat appear on every page */}
+        <Chat /> {}
       </div>
     </Router>
   );

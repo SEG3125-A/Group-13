@@ -17,7 +17,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-divider"></div>
         <div className="navbar-book">
-            <a href="/" className="book">Book Table</a>
+            <Link to="/reserve" className="book">Book Table</Link>
         </div>
 
         
