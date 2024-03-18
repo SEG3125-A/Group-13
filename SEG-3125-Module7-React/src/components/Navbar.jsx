@@ -8,9 +8,9 @@ const Navbar = () => {
         <div className="navbar-divider"></div>
         <ul className="navbar-links">
             <li className="links"><Link to="/">Home</Link></li>
-            <li className="links"><Link to="/about">About</Link></li>
             <li className="links"><Link to="/menu">Menu</Link></li>
-            <li className="links"><Link to="/contact">Contact</Link></li>
+            <li className="links"><Link to="/about">About</Link></li>
+            <li className="links"><Link to="/faq">FAQ</Link></li>
         </ul>
         <div className="navbar-login">
             <a href="login" className="login">Log In / Register</a>
