@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './FAQ.css'; // Make sure you have the corresponding CSS file
-import Accordion from './Accordion';
+import Accordion from '../components/Accordion';
 // accordion tutorial from: https://www.freecodecamp.org/news/build-accordion-menu-in-react-without-external-libraries/
 
 const FAQ = () => {
