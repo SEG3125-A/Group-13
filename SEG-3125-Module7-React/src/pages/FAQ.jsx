@@ -7,7 +7,7 @@ const FAQ = () => {
     const accordionData = [
         {
             title: 'Reservations',
-            content: 'testing one line<br>this should be a second line'
+            content: 'filler'
         },
         {
             title: 'Menu',
@@ -22,13 +22,13 @@ const FAQ = () => {
     return (
         <div className="faq">
             <h1>Got Questions?</h1>
-            <p>This is the FAQ page.</p>
             <div className="accordion">
                 {accordionData.map(({ title, content }) => (
                     <Accordion title={title} content={content} />
                 ))}
             </div>
             <h1>Still have questions?</h1>
+            <br></br>
             <p>Click "Chat with us!" to talk to one of our staff!</p>
         </div>
     );
