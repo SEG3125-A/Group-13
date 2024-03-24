@@ -1,4 +1,4 @@
-.ownerContainer, .historyContainer {
+.leftContainer, .rightContainer {
     display: flex;
     /* align-items: center; */
     justify-content: center;
