@@ -34,5 +34,7 @@
   "submit": "Submit",
   "summary": "Summary",
   "reservation-submitted": "Reservation submitted!",
-  "notes-placeholder": "Any special requests or notes for the restaurant staff..."
+  "notes-placeholder": "Any special requests or notes for the restaurant staff...",
+  "automated-response": "This is an automated response for testing.",
+  "send": "Send"
 }

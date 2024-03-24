@@ -24,7 +24,7 @@ const Chat = () => {
       setInput('');
 
       setTimeout(() => {
-        const botResponse = { text: 'This is an automated response for testing.', sender: 'bot' };
+        const botResponse = { text: t('automated-response'), sender: 'bot' };
         setMessages((prevMessages) => [...prevMessages, botResponse]);
       }, 1000);
     }
@@ -55,7 +55,7 @@ const Chat = () => {
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSendClick()}
             />
-            <button onClick={handleSendClick}>Send</button>
+            <button onClick={handleSendClick}>{t('send')}</button>
           </div>
         </div>
       )}

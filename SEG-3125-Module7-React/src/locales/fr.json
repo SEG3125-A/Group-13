@@ -34,5 +34,7 @@
   "submit": "Soumettre",
   "summary": "Résumé",
   "reservation-submitted": "Réservation soumise!",
-  "notes-placeholder": "Toute demande particulière ou note pour le personnel du restaurant..."
+  "notes-placeholder": "Toute demande particulière ou note pour le personnel du restaurant...",
+  "automated-response": "Ceci est une réponse automatisée pour tester.",
+  "send": "Envoyer"
 }
