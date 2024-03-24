@@ -27,10 +27,6 @@ const FAQ = () => {
         {
             title: 'Do you have vegetarian or vegan options?',
             content: 'Yes, we do! Dishes that are vegetarian or vegan are listed on our menu. If you make a reservation instead of a walk-in, you can leave instructions on any protein replacement to use in a particular dish. We\'ll contact you if we\'re unable to fulfill your request as specified.'
-        },
-        {
-            title: 'Dietary Restrictions',
-            content: 'filler'
         }
     ];
 
