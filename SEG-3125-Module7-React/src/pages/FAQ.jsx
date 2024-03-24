@@ -7,15 +7,15 @@ const FAQ = () => {
     const accordionDataReservations = [
         {
             title: 'How do I make a reservation?',
-            content: 'filler'
+            content: 'You can reserve a table either through this website or by calling us! Click "Book Table" in the navigation bar and you\'ll be taken to the reservation page.'
         },
         {
             title: 'How early in advance should I make one?',
-            content: 'For small gatherings, please reserve your seats two hours before you arrive at the latest. If you make a reservation within 2 hours before you arrive, we can\'t guarantee that we\'ll have space for you! The earlier you make your reservation, the better!'
+            content: 'For small gatherings, please reserve your table(s) two hours before you arrive at the latest. If you make a reservation within 2 hours before you arrive, we can\'t guarantee that we\'ll have space for you! The earlier you make your reservation, the better!'
         },
         {
             title: 'Is there a limit to how many guests I can bring?',
-            content: 'Technically, yes. Depending on how many seats are already reserved during a particular time on a particular day, we might not be able to accomodate for all of your guests if you\'re planning on bringing a lot. Please chat with a staff member or call us to reserve the entire restaurant.'
+            content: 'Technically, yes. Depending on how many tables are already reserved during a particular time on a particular day, we might not be able to accomodate for all of your guests if you\'re planning on bringing a lot. Please chat with a staff member or call us to reserve the entire restaurant.'
         }
     ];
 
