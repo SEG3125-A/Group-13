@@ -5,7 +5,7 @@ import Accordion from '../components/Accordion';
 import { useTranslation } from "react-i18next";
 
 const FAQ = () => {
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     const accordionDataReservations = [
         {
             title: 'faq-q1',

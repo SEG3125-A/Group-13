@@ -4,7 +4,7 @@ import './Reservation.css'; // Make sure you have the corresponding CSS file
 import { useTranslation } from "react-i18next";
 
 const Reservation = () => {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
   const [reservation, setReservation] = useState({
     name: '',
