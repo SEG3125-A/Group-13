@@ -67,7 +67,7 @@ const FAQ = () => {
             </div>
             <h1>{t("faq-morequestions")}</h1>
             <br></br>
-            <p>{t("faq-chat", { 'chat-button': t("chat-button") })}</p>
+            <p>{t("faq-chat", { 'chat-button': t("chat-open") })}</p>
         </div>
     );
 }
