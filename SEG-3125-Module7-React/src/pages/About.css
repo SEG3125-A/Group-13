@@ -1,0 +1,28 @@
+.ownerContainer, .historyContainer {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+img {
+    max-width: 80%;
+    padding-top: 10%;
+}
+.imgLeft {
+    /* max-width: 80%; */
+    /* max-width: 15%; */
+    float: left;
+}
+
+.imgRight{
+    /* max-width: 80%; */
+    float: right;
+}
+.text {
+    font-size: 20px;
+    /* padding-left: 20px; */
+    padding-top: 10%;
+    max-width: 50%;
+    /* float: left; */
+    /* vertical-align: auto; */
+}
