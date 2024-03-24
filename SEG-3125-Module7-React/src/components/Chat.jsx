@@ -1,7 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Chat.css'; // Ensure you have the corresponding CSS file
 
+import { useTranslation } from "react-i18next";
+
 const Chat = () => {
+  const { t } = useTranslation();
+
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +35,7 @@ const Chat = () => {
   return (
     <>
       <button onClick={toggleChat} className="chat-toggle">
-        {isOpen ? '▼ Close Chat' : '▲ Chat with us!'}
+        {isOpen ? '▼ ' + t("chat-close") : '▲ ' + t("chat-open")}
       </button>
 
       {isOpen && (
