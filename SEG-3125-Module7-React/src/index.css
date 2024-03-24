@@ -18,6 +18,7 @@ a {
 .content {
   max-width: 1200px; /* Positions the content near the middle of the page */
   margin: auto;
+  margin-bottom: 70px;
   padding: 20px;
 }
 
