@@ -5,7 +5,7 @@ const About = () => {
     <div className="about">
         <h1>About Us</h1>
         <div className="leftContainer">
-          <div className="imageLeft"><img src="images/restaurant-owner.png" alt='Restaurant owners standing in the doorway to The Big Fork with smiles.'></img></div>
+          <div className="imageLeft"><img src="images/restaurant-owner.png" alt='Luca and Sofia, the restaurant owners, standing in the doorway to The Big Fork with smiles.'></img></div>
           <div className="text">
             <p>Hi! We're Luca and Sofia Rossi, the proud second generation owners of The Big Fork. We've been helping to keep the family recipes of the Rossis alive by sharing them with the rest of the world.</p>
             <br></br>
@@ -20,10 +20,10 @@ const About = () => {
           <br></br>
           <p>With little else other than their passion and a whole lot of elbow grease, they established The Big Fork!</p>
         </div>
-          <div className='imageRight'><img src="images/dining-room.jpg" alt='alt'></img></div>
+          <div className='imageRight'><img src="images/dining-room.jpg" alt="The Big Fork's dining room."></img></div>
         </div>
         <div className='leftContainer'>
-          <div className="imageLeft"><img src="images/server.jpg" alt=""></img></div>
+          <div className="imageLeft"><img src="images/server.jpg" alt="A server pouring wine for some guests."></img></div>
           <div className="text">
             <p>Despite initial struggles, the couple's charm and passion won over the hearts (and stomachs!) of the locals. Soon enough, The Big Fork's authentic recipes had gained a loyal following.</p>
             <br></br>
