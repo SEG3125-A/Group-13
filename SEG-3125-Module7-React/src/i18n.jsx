@@ -10,8 +10,8 @@ import frJSON from './locales/fr.json' // French
 i18n.use(initReactI18next)
     .init({
         resources: {
-            en: { ...enJSON },
-            fr: { ...frJSON },
+            en: { translation: {...enJSON} },
+            fr: { translation: {...frJSON} },
         },
         lng: "en", // Set the initial language of the App
         fallbackLng: "en", // Fallback language for missing translations

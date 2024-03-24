@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './Reservation.css'; // Make sure you have the corresponding CSS file
 
+import { useTranslation } from "react-i18next";
+
 const Reservation = () => {
+  const { t } = useTranslation();
+
   const [reservation, setReservation] = useState({
     name: '',
     date: '',
@@ -19,17 +23,17 @@ const Reservation = () => {
     e.preventDefault();
     // Here you would handle the reservation data submission to your backend
     console.log('Reservation details:', reservation);
-    alert('Reservation submitted!');
+    alert(t('reservation-submitted'));
   };
 
   return (
     <div className="reservation-container">
-      <h1>Reserve a Spot!</h1>
+      <h1>{t("book-table")}</h1>
       <div className="reservation-form-container">
         <form onSubmit={handleSubmit} className="reservation-form">
           <div className="form-section">
             <label>
-              Name:
+              {t('name')}:
               <input
                 type="text"
                 name="name"
@@ -39,7 +43,7 @@ const Reservation = () => {
               />
             </label>
             <label>
-              Date:
+              {t('date')}:
               <input
                 type="date"
                 name="date"
@@ -49,7 +53,7 @@ const Reservation = () => {
               />
             </label>
             <label>
-              Time:
+              {t('time')}:
               <input
                 type="time"
                 name="time"
@@ -59,7 +63,7 @@ const Reservation = () => {
               />
             </label>
             <label>
-              Number of Guests:
+              {t('num-guests')}:
               <input
                 type="number"
                 name="guests"
@@ -70,25 +74,25 @@ const Reservation = () => {
               />
             </label>
             <label>
-              Notes:
+              {t('notes')}:
               <textarea
                 name="notes"
                 value={reservation.notes}
                 onChange={handleInputChange}
                 rows="4"
-                placeholder="Any special requests or notes for the restaurant staff..."
+                placeholder={t('notes-placeholder')}
               />
             </label>
-            <button type="submit">Submit</button>
+            <button type="submit">{t('submit')}</button>
           </div>
         </form>
         <div className="reservation-summary">
-          <h3>Summary</h3>
-          <p>Name: {reservation.name}</p>
-          <p>Date: {reservation.date}</p>
-          <p>Time: {reservation.time}</p>
-          <p>Guests: {reservation.guests}</p>
-          <p>Notes: {reservation.notes}</p>
+          <h3>{t('summary')}</h3>
+          <p>{t('name')}: {reservation.name}</p>
+          <p>{t('date')}: {reservation.date}</p>
+          <p>{t('time')}: {reservation.time}</p>
+          <p>{t('num-guests')}: {reservation.guests}</p>
+          <p>{t('notes')}: {reservation.notes}</p>
         </div>
       </div>
     </div>

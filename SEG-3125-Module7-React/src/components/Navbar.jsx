@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { useTranslation } from "react-i18next";
 import './Navbar.css';
+
+import { useTranslation } from "react-i18next";
 
 const LANGUAGES = [
     { label: "English", code: "en" },
