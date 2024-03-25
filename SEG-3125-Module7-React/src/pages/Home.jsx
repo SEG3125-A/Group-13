@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Background from '../components/Background/Background';
 import Hero from '../components/Hero/Hero';
+import { useTranslation } from "react-i18next";
 const Home = () => {
     
     let heroData = [

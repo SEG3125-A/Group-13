@@ -1,11 +1,10 @@
 import './About.css';
-
 import { useTranslation } from "react-i18next";
 
 const About = () => {
   const {t} = useTranslation();
   return (
-    <div className="about">
+    <div id="about" className="about">
         <h1>{t('about-us')}</h1>
         <div className="leftContainer">
           <div className="imageLeft"><img src="images/restaurant-owner.png" alt={t('about-alt')}></img></div>
