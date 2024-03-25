@@ -1,15 +1,14 @@
 import './Hero.css'
 import arrow_btn from '../../assets/images/arrow_btn.png'
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 const Hero =({heroData,setHeroCount,heroCount}) => {
     const navigate = useNavigate(); // Hook for navigation
-
+    const { t } = useTranslation();
     const navigateToMenu = () => {
     navigate('/menu'); // Define the path you want to navigate to
   };
-
-
     return (
         <div className='hero'>
             <div className="hero-text">
@@ -17,7 +16,7 @@ const Hero =({heroData,setHeroCount,heroCount}) => {
                 <p>{heroData.text2}</p>
             </div>
             <div className="hero-explore" onClick={navigateToMenu}>
-                <p>Explore the menu</p>
+                <p>{t('hero-explore')}</p>
                 <img src={arrow_btn} alt="" />
             </div>
             <div className="hero-dot-play">
