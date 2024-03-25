@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="navbar-divider"></div>
         <ul className="navbar-links">
             <li className="links"><Link to="/">{t("home")}</Link></li>
-            <li className="links"><Link to="/menu">{t("menu")}</Link></li>
+            <li className="links"><Link to="/menu">{t("menu_label")}</Link></li>
             <li className="links"><Link to="/about">{t("about")}</Link></li>
             <li className="links"><Link to="/faq">{t("faq")}</Link></li>
         </ul>
